@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Organizza — cada arquivo no lugar certo</title>
+  <meta name="description" content="Cada arquivo no lugar certo. Cada cliente em dia. Do WhatsApp à pasta certa, sem você organizar nada." />
+  <meta name="theme-color" content="#0D1014" />
+  <link rel="preload" href="./inter.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="./estilo.css" />
+</head>
+<body>
+  <a class="pular" href="#convite">Ir para o convite</a>
+
+  <header class="topo">
+    <a class="marca" href="./" aria-label="Organizza, início">
+      <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+        <mask id="corte" maskUnits="userSpaceOnUse" x="0" y="0" width="64" height="64">
+          <rect width="64" height="64" fill="#fff" />
+          <path d="M8 39 41 6" stroke="#000" stroke-width="7" stroke-linecap="round" />
+        </mask>
+        <path d="M21 10h15l18 18v12L40 54H22L10 42V22Z" fill="none" stroke="currentColor" stroke-width="10" stroke-linejoin="round" mask="url(#corte)" />
+      </svg>
+      <span>Organizza</span>
+    </a>
+    <nav class="topo__acoes" aria-label="Conta">
+      <a class="link" href="/">Entrar</a>
+      <a class="botao botao--forte" href="#convite">Pedir convite</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="abertura" aria-labelledby="promessa">
+      <div class="abertura__texto">
+        <h1 id="promessa">Cada arquivo no lugar certo. <span>Cada cliente em dia.</span></h1>
+        <p class="abertura__como">Do WhatsApp à pasta certa, sem você organizar nada.</p>
+        <p class="abertura__para">
+          Para quem trabalha por cliente e por projeto — marcenaria, arquitetura, interiores, fotografia —
+          e recebe quase tudo pelo celular.
+        </p>
+        <div class="abertura__acoes">
+          <a class="botao botao--forte botao--grande" href="#convite">Pedir convite</a>
+          <a class="link link--seta" href="#pasta">Ver onde os arquivos vão parar</a>
+        </div>
+      </div>
+
+      <!-- A Entrada, ao vivo: cada arquivo chega com o nome do celular e sai com o nome e o lugar certos. -->
+      <figure class="entrada" aria-label="Exemplo da Entrada guardando arquivos" data-entrada>
+        <div class="entrada__barra">
+          <span class="entrada__titulo">Entrada</span>
+          <span class="entrada__conta"><b data-restam>5</b> esperando</span>
+        </div>
+
+        <ol class="entrada__fila" data-fila>
+          <li class="arq" data-item>
+            <span class="arq__nome"><span class="arq__antes">IMG-20260926-WA0012.jpg</span><span class="arq__depois">FT_cozinha_frente_2026-09-26.jpg</span></span>
+            <span class="arq__palpite">Fotos · Ana Prado · cozinha</span>
+            <span class="arq__onde">M-0001_ana-prado\01_cozinha-lavabo\06_fotos</span>
+          </li>
+          <li class="arq" data-item>
+            <span class="arq__nome"><span class="arq__antes">planta final (2).pdf</span><span class="arq__depois">MD_cozinha_2026-09-26.pdf</span></span>
+            <span class="arq__palpite">Medidas · Ana Prado · cozinha</span>
+            <span class="arq__onde">M-0001_ana-prado\01_cozinha-lavabo\01_medidas</span>
+          </li>
+          <li class="arq" data-item>
+            <span class="arq__nome"><span class="arq__antes">render closet FINAL (1).png</span><span class="arq__depois">3D_closet_2026-09-26.png</span></span>
+            <span class="arq__palpite">Projeto 3D · Ricardo Marques · closet</span>
+            <span class="arq__onde">M-0003_ricardo-marques\01_closet-dormitorio\02_projeto-3d</span>
+          </li>
+          <li class="arq" data-item>
+            <span class="arq__nome"><span class="arq__antes">contrato assinado.pdf</span><span class="arq__depois">CT_contrato-assinado_2026-09-26.pdf</span></span>
+            <span class="arq__palpite">Contrato · Família Duarte</span>
+            <span class="arq__onde">M-0005_familia-duarte\01_apartamento-completo\04_contrato</span>
+          </li>
+          <li class="arq" data-item>
+            <span class="arq__nome"><span class="arq__antes">Orçamento_Duarte_REV3.pdf</span><span class="arq__depois">OR_orcamento-duarte-rev3_2026-09-26.pdf</span></span>
+            <span class="arq__palpite">Orçamento · Família Duarte</span>
+            <span class="arq__onde">M-0005_familia-duarte\01_apartamento-completo\03_orcamento</span>
+          </li>
+        </ol>
+
+        <div class="entrada__pasta" aria-hidden="true">
+          <span class="entrada__raiz">D:\Organizza\marcenaria\</span>
+          <span class="entrada__ultimo" data-ultimo>&nbsp;</span>
+        </div>
+        <figcaption class="exemplo">Clientes e arquivos de exemplo. Os nomes saem da regra do próprio app.</figcaption>
+      </figure>
+    </section>
+
+    <section class="pasta" id="pasta" aria-labelledby="pasta-titulo">
+      <div class="pasta__texto">
+        <h2 id="pasta-titulo">A pasta continua sua.</h2>
+        <p>
+          O Organizza cria e mantém uma pasta no seu disco, uma por cliente, uma por projeto, uma por tipo de
+          arquivo. Ela abre no Explorador como qualquer outra, funciona sem internet, e continua legível se um dia
+          você deixar o app.
+        </p>
+        <p class="pasta__nota">Você escolhe onde ela mora uma vez. Depois disso, não decide mais caminho nenhum.</p>
+      </div>
+
+      <div class="explorador" role="img" aria-label="A pasta de um cliente no Explorador do Windows, com uma subpasta por tipo de arquivo">
+        <div class="explorador__caminho"><span>Organizza</span><i></i><span>marcenaria</span><i></i><span>M-0001_ana-prado</span><i></i><b>01_cozinha-lavabo</b></div>
+        <ul class="explorador__lista">
+          <li><span class="pastinha"></span>01_medidas<small>3 itens</small></li>
+          <li><span class="pastinha"></span>02_projeto-3d<small>5 itens</small></li>
+          <li><span class="pastinha"></span>03_orcamento<small>2 itens</small></li>
+          <li><span class="pastinha"></span>04_contrato<small>1 item</small></li>
+          <li><span class="pastinha"></span>05_pagamentos<small>vazia</small></li>
+          <li class="explorador__aberta"><span class="pastinha"></span>06_fotos<small>12 itens</small></li>
+        </ul>
+        <ul class="explorador__arquivos">
+          <li>FT_cozinha_frente_2026-09-26.jpg</li>
+          <li>FT_cozinha_lateral_2026-09-26.jpg</li>
+          <li>FT_lavabo_2026-09-24.jpg</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="adocao" aria-labelledby="adocao-titulo">
+      <h2 id="adocao-titulo">Os anos de trabalho vêm junto.</h2>
+      <p class="adocao__texto">
+        Aponte a pasta de clientes que você já tem. O app propõe um cliente para cada subpasta e um projeto para
+        cada pasta de dentro, você confere, e ele organiza — copiando, e deixando os originais onde estão.
+      </p>
+      <div class="adocao__antes-depois">
+        <div class="adocao__lado">
+          <p class="adocao__rotulo">A pasta de hoje</p>
+          <ul class="mono-lista">
+            <li>CLIENTES\JOSÉ E MARIA\cozinha nova\fotos celular\IMG_0412.jpg</li>
+            <li>CLIENTES\JOSÉ E MARIA\cozinha nova\orçamento FINAL certo.pdf</li>
+            <li>CLIENTES\CLÍNICA VITA\recepção\medidas.jpg</li>
+            <li>CLIENTES\CLÍNICA VITA\recepção\WhatsApp Image 2025-03-02.jpeg</li>
+          </ul>
+        </div>
+        <div class="adocao__lado adocao__lado--depois">
+          <p class="adocao__rotulo">Na pasta do Organizza</p>
+          <ul class="mono-lista mono-lista--depois">
+            <li>M-0032_jose-e-maria\01_cozinha-nova\06_fotos\<b>FT_2026-09-26.jpg</b></li>
+            <li>M-0032_jose-e-maria\01_cozinha-nova\03_orcamento\<b>OR_orcamento-final-certo_2026-09-26.pdf</b></li>
+            <li>M-0031_clinica-vita\01_recepcao\01_medidas\<b>MD_medidas_2026-09-26.jpg</b></li>
+            <li>M-0031_clinica-vita\01_recepcao\06_fotos\<b>FT_2026-09-26.jpeg</b></li>
+          </ul>
+        </div>
+      </div>
+      <p class="adocao__fim">
+        No fim, o app diz o que fez: “Organizei 1.284 arquivos, em 37 clientes e 52 projetos. 79% foram pelo nome ou
+        pelo formato; o resto, pelo tipo mais provável, para você conferir.”
+      </p>
+      <p class="exemplo">Pastas, nomes e números de exemplo. Os nomes novos saem da regra do próprio app.</p>
+    </section>
+
+    <section class="dia" aria-labelledby="dia-titulo">
+      <h2 id="dia-titulo">E o dia sabe o que falta.</h2>
+      <p class="dia__texto">
+        O Hoje junta o que pede você: o documento que falta para a etapa andar, a versão nova que ainda não foi para
+        o cliente, a entrega que ficou apertada.
+      </p>
+      <ul class="dia__linhas" aria-label="Exemplo do Hoje">
+        <li><span class="dia__hora">9:40</span><span>Pedido a Ana há 4 dias: fotos do ambiente.</span><em>Pedir de novo</em></li>
+        <li><span class="dia__hora">11:15</span><span>Versão nova do 3D do closet ainda não enviada a Ricardo.</span><em>Marcar enviada</em></li>
+        <li><span class="dia__hora">16:30</span><span>Entrega do apartamento em 05/10 · apertado.</span><em>Ver o projeto</em></li>
+      </ul>
+      <p class="exemplo dia__exemplo">Exemplo do Hoje, com as frases que o app usa.</p>
+    </section>
+
+    <section class="conta" aria-labelledby="conta-titulo">
+      <h2 id="conta-titulo">Sem servidor nosso no meio.</h2>
+      <p>
+        Os computadores conversam pela sua conta do Google Drive, e o que eles trocam fica lá, na sua conta. O
+        Organizza não guarda seus arquivos nem seus clientes em lugar nenhum além do seu computador e da sua nuvem.
+      </p>
+    </section>
+
+    <section class="convite" id="convite" aria-labelledby="convite-titulo">
+      <h2 id="convite-titulo">Estamos abrindo aos poucos.</h2>
+      <p id="convite-fechado">A lista de espera abre nos próximos dias. Até lá o formulário fica fechado, porque ainda não guarda nada.</p>
+      <form class="convite__form" data-convite novalidate aria-describedby="convite-fechado">
+        <label class="campo">
+          <span>E-mail</span>
+          <input type="email" name="email" autocomplete="email" required placeholder="voce@exemplo.com" disabled />
+        </label>
+        <label class="campo">
+          <span>O que você faz</span>
+          <select name="oficio" disabled>
+            <option>Marcenaria e móveis planejados</option>
+            <option>Arquitetura</option>
+            <option>Design de interiores</option>
+            <option>Fotografia</option>
+            <option>Outro</option>
+          </select>
+        </label>
+        <button class="botao botao--forte botao--grande" type="submit" disabled>Pedir convite</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <span>Organizza · nome provisório</span>
+    <a class="link" href="/">Já tenho convite: entrar</a>
+  </footer>
+
+  <script src="./entrada.js" defer></script>
+</body>
+</html>
