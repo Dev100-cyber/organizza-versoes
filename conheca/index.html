@@ -24,104 +24,213 @@
       </svg>
       <span>Organizza</span>
     </a>
+    <nav class="topo__secoes" aria-label="Seções">
+      <a href="#como">Como funciona</a>
+      <a href="#planos">Planos</a>
+      <a href="#duvidas">Dúvidas</a>
+    </nav>
     <nav class="topo__acoes" aria-label="Conta">
       <a class="link" href="/">Entrar</a>
-      <a class="botao botao--forte" href="#convite">Pedir convite</a>
+      <a class="botao botao--forte" href="https://docs.google.com/forms/d/e/1FAIpQLSepyDrJO37RKZ0zxdpPHEn-aTGBo5G7R-Lo_7ZwaOTp64ZHNw/viewform" target="_blank" rel="noopener" data-convite-link>Pedir convite</a>
     </nav>
   </header>
 
   <main>
+    <!-- 1. A abertura: a promessa, e o app fazendo o que ela diz. -->
     <section class="abertura" aria-labelledby="promessa">
       <div class="abertura__texto">
         <h1 id="promessa">Cada arquivo no lugar certo. <span>Cada cliente em dia.</span></h1>
         <p class="abertura__como">Do WhatsApp à pasta certa, sem você organizar nada.</p>
         <p class="abertura__para">
-          Para quem trabalha por cliente e por projeto — marcenaria, arquitetura, interiores, fotografia —
-          e recebe quase tudo pelo celular.
+          O Organizza junta os arquivos, os clientes e os projetos de quem trabalha por encomenda — marcenaria,
+          arquitetura, interiores, fotografia — numa pasta que continua sua.
         </p>
         <div class="abertura__acoes">
-          <a class="botao botao--forte botao--grande" href="#convite">Pedir convite</a>
-          <a class="link link--seta" href="#pasta">Ver onde os arquivos vão parar</a>
+          <a class="botao botao--forte botao--grande" href="https://docs.google.com/forms/d/e/1FAIpQLSepyDrJO37RKZ0zxdpPHEn-aTGBo5G7R-Lo_7ZwaOTp64ZHNw/viewform" target="_blank" rel="noopener" data-convite-link>Pedir convite</a>
+          <a class="link link--seta" href="#como">Ver como funciona</a>
         </div>
+        <p class="abertura__nota">Grátis no computador, para Windows.</p>
       </div>
 
-      <!-- A Entrada, ao vivo: cada arquivo chega com o nome do celular e sai com o nome e o lugar certos. -->
-      <figure class="entrada" aria-label="Exemplo da Entrada guardando arquivos" data-entrada>
-        <div class="entrada__barra">
-          <span class="entrada__titulo">Entrada</span>
-          <span class="entrada__conta"><b data-restam>5</b> esperando</span>
+      <div class="abertura__palco">
+        <!-- As colunas das etapas, as mesmas do quadro, ampliadas: a cor do app de verdade. -->
+        <div class="colunas" aria-hidden="true">
+          <span style="--cor: var(--lead)"></span><span style="--cor: var(--medicao)"></span><span style="--cor: var(--projeto)"></span>
+          <span style="--cor: var(--aprovacao)"></span><span style="--cor: var(--contrato)"></span><span style="--cor: var(--producao)"></span>
         </div>
+        <figure class="tela tela--abertura">
+          <img src="./img/quadro-1600.webp" srcset="./img/quadro-1600.webp 1600w, ./img/quadro-3200.webp 3200w"
+               sizes="(max-width: 960px) 100vw, 60vw" width="1600" height="1000"
+               alt="O quadro de projetos do Organizza, com os projetos por etapa: Lead, Medição, Projeto 3D, Contrato e sinal" />
+        </figure>
 
-        <ol class="entrada__fila" data-fila>
-          <li class="arq" data-item>
-            <span class="arq__nome"><span class="arq__antes">IMG-20260926-WA0012.jpg</span><span class="arq__depois">FT_cozinha_frente_2026-09-26.jpg</span></span>
-            <span class="arq__palpite">Fotos · Ana Prado · cozinha</span>
-            <span class="arq__onde">M-0001_ana-prado\01_cozinha-lavabo\06_fotos</span>
-          </li>
-          <li class="arq" data-item>
-            <span class="arq__nome"><span class="arq__antes">planta final (2).pdf</span><span class="arq__depois">MD_cozinha_2026-09-26.pdf</span></span>
-            <span class="arq__palpite">Medidas · Ana Prado · cozinha</span>
-            <span class="arq__onde">M-0001_ana-prado\01_cozinha-lavabo\01_medidas</span>
-          </li>
-          <li class="arq" data-item>
-            <span class="arq__nome"><span class="arq__antes">render closet FINAL (1).png</span><span class="arq__depois">3D_closet_2026-09-26.png</span></span>
-            <span class="arq__palpite">Projeto 3D · Ricardo Marques · closet</span>
-            <span class="arq__onde">M-0003_ricardo-marques\01_closet-dormitorio\02_projeto-3d</span>
-          </li>
-          <li class="arq" data-item>
-            <span class="arq__nome"><span class="arq__antes">contrato assinado.pdf</span><span class="arq__depois">CT_contrato-assinado_2026-09-26.pdf</span></span>
-            <span class="arq__palpite">Contrato · Família Duarte</span>
-            <span class="arq__onde">M-0005_familia-duarte\01_apartamento-completo\04_contrato</span>
-          </li>
-          <li class="arq" data-item>
-            <span class="arq__nome"><span class="arq__antes">Orçamento_Duarte_REV3.pdf</span><span class="arq__depois">OR_orcamento-duarte-rev3_2026-09-26.pdf</span></span>
-            <span class="arq__palpite">Orçamento · Família Duarte</span>
-            <span class="arq__onde">M-0005_familia-duarte\01_apartamento-completo\03_orcamento</span>
-          </li>
-        </ol>
-
-        <div class="entrada__pasta" aria-hidden="true">
-          <span class="entrada__raiz">D:\Organizza\marcenaria\</span>
-          <span class="entrada__ultimo" data-ultimo>&nbsp;</span>
-        </div>
-        <figcaption class="exemplo">Clientes e arquivos de exemplo. Os nomes saem da regra do próprio app.</figcaption>
-      </figure>
+        <!-- A Entrada, ao vivo: cada arquivo chega com o nome do celular e sai com o nome e o lugar certos. -->
+        <figure class="entrada" aria-label="Exemplo da Entrada guardando arquivos" data-entrada>
+          <div class="entrada__barra">
+            <span class="entrada__titulo">Entrada</span>
+            <span class="entrada__conta"><b data-restam>5</b> esperando</span>
+          </div>
+          <ol class="entrada__fila" data-fila>
+            <li class="arq" data-item>
+              <span class="arq__nome"><span class="arq__antes">IMG-20260926-WA0012.jpg</span><span class="arq__depois">FT_cozinha_frente_2026-09-26.jpg</span></span>
+              <span class="arq__palpite">Fotos · Ana Prado · cozinha</span>
+              <span class="arq__onde">M-0001_ana-prado\01_cozinha-lavabo\06_fotos</span>
+            </li>
+            <li class="arq" data-item>
+              <span class="arq__nome"><span class="arq__antes">planta final (2).pdf</span><span class="arq__depois">MD_cozinha_2026-09-26.pdf</span></span>
+              <span class="arq__palpite">Medidas · Ana Prado · cozinha</span>
+              <span class="arq__onde">M-0001_ana-prado\01_cozinha-lavabo\01_medidas</span>
+            </li>
+            <li class="arq" data-item>
+              <span class="arq__nome"><span class="arq__antes">render closet FINAL (1).png</span><span class="arq__depois">3D_closet_2026-09-26.png</span></span>
+              <span class="arq__palpite">Projeto 3D · Ricardo Marques · closet</span>
+              <span class="arq__onde">M-0003_ricardo-marques\01_closet-dormitorio\02_projeto-3d</span>
+            </li>
+            <li class="arq" data-item>
+              <span class="arq__nome"><span class="arq__antes">contrato assinado.pdf</span><span class="arq__depois">CT_contrato-assinado_2026-09-26.pdf</span></span>
+              <span class="arq__palpite">Contrato · Família Duarte</span>
+              <span class="arq__onde">M-0005_familia-duarte\01_apartamento-completo\04_contrato</span>
+            </li>
+            <li class="arq" data-item>
+              <span class="arq__nome"><span class="arq__antes">Orçamento_Duarte_REV3.pdf</span><span class="arq__depois">OR_orcamento-duarte-rev3_2026-09-26.pdf</span></span>
+              <span class="arq__palpite">Orçamento · Família Duarte</span>
+              <span class="arq__onde">M-0005_familia-duarte\01_apartamento-completo\03_orcamento</span>
+            </li>
+          </ol>
+          <div class="entrada__pasta" aria-hidden="true">
+            <span class="entrada__raiz">D:\Organizza\marcenaria\</span>
+            <span class="entrada__ultimo" data-ultimo>&nbsp;</span>
+          </div>
+        </figure>
+      </div>
+      <p class="exemplo abertura__exemplo">Telas do app com clientes de exemplo. Os nomes de arquivo saem da regra do próprio app.</p>
     </section>
 
-    <section class="pasta" id="pasta" aria-labelledby="pasta-titulo">
-      <div class="pasta__texto">
-        <h2 id="pasta-titulo">A pasta continua sua.</h2>
-        <p>
-          O Organizza cria e mantém uma pasta no seu disco, uma por cliente, uma por projeto, uma por tipo de
-          arquivo. Ela abre no Explorador como qualquer outra, funciona sem internet, e continua legível se um dia
-          você deixar o app.
-        </p>
-        <p class="pasta__nota">Você escolhe onde ela mora uma vez. Depois disso, não decide mais caminho nenhum.</p>
-      </div>
+    <!-- 2. A dor, nas palavras de quem vive. -->
+    <section class="dor campo campo--coral" aria-labelledby="dor-titulo">
+      <h2 id="dor-titulo">O WhatsApp virou a pasta do seu trabalho.</h2>
+      <ul class="dor__lista">
+        <li>
+          <code>IMG-20250312-WA0044.jpg</code>
+          <p>A foto da medição está em algum lugar da conversa de março.</p>
+        </li>
+        <li>
+          <code>orçamento FINAL certo (2).pdf</code>
+          <p>Três orçamentos com quase o mesmo nome, e nenhum diz qual o cliente aprovou.</p>
+        </li>
+        <li>
+          <code>render cozinha v4 / v5 / v5-ok</code>
+          <p>O cliente diz que aprovou a versão com a ilha. Qual era, e ele recebeu mesmo?</p>
+        </li>
+      </ul>
+      <p class="dor__virada">O Organizza põe cada coisa no lugar no momento em que ela chega — e lembra o que já foi para o cliente.</p>
+    </section>
 
-      <div class="explorador" role="img" aria-label="A pasta de um cliente no Explorador do Windows, com uma subpasta por tipo de arquivo">
-        <div class="explorador__caminho"><span>Organizza</span><i></i><span>marcenaria</span><i></i><span>M-0001_ana-prado</span><i></i><b>01_cozinha-lavabo</b></div>
-        <ul class="explorador__lista">
-          <li><span class="pastinha"></span>01_medidas<small>3 itens</small></li>
-          <li><span class="pastinha"></span>02_projeto-3d<small>5 itens</small></li>
-          <li><span class="pastinha"></span>03_orcamento<small>2 itens</small></li>
-          <li><span class="pastinha"></span>04_contrato<small>1 item</small></li>
-          <li><span class="pastinha"></span>05_pagamentos<small>vazia</small></li>
-          <li class="explorador__aberta"><span class="pastinha"></span>06_fotos<small>12 itens</small></li>
-        </ul>
-        <ul class="explorador__arquivos">
-          <li>FT_cozinha_frente_2026-09-26.jpg</li>
-          <li>FT_cozinha_lateral_2026-09-26.jpg</li>
-          <li>FT_lavabo_2026-09-24.jpg</li>
-        </ul>
+    <!-- 3. Como funciona: três passos, porque são três de verdade. -->
+    <section class="como" id="como" aria-labelledby="como-titulo">
+      <h2 id="como-titulo">Você diz o que é. O app faz o resto.</h2>
+      <ol class="passos">
+        <li>
+          <span class="passos__n">1</span>
+          <h3>Chega</h3>
+          <p>Arraste do WhatsApp, cole com Ctrl V, ou deixe o "Salvar tudo" do WhatsApp cair na pasta de entrada. O app pega sozinho.</p>
+        </li>
+        <li>
+          <span class="passos__n">2</span>
+          <h3>Você confere</h3>
+          <p>O app lê o lote e diz o que acha: foto da cozinha da Ana, orçamento da Família Duarte. Você confirma com um clique ou corrige.</p>
+        </li>
+        <li>
+          <span class="passos__n">3</span>
+          <h3>Está no lugar</h3>
+          <p>O arquivo ganha um nome que diz o que é e vai para a pasta do cliente, do projeto e do tipo. No seu disco, onde você achar.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- 4. O app por dentro: três telas de verdade. -->
+    <section class="tour" aria-label="O app por dentro">
+      <article class="tour__item" style="--cor: var(--projeto)">
+        <div class="tour__texto">
+          <h2>Todos os projetos, e em que pé está cada um.</h2>
+          <p>Um quadro com as etapas do seu ofício — medição, projeto, aprovação, produção, montagem. Cada cartão mostra a próxima ação e o que falta para andar.</p>
+          <ul class="tour__lista">
+            <li>Etapas com o nome que você usa</li>
+            <li>O documento que falta para avançar, dito antes</li>
+            <li>A capa de cada trabalho com a foto dele</li>
+          </ul>
+        </div>
+        <figure class="tela tela--campo">
+          <img src="./img/quadro-1600.webp" srcset="./img/quadro-1600.webp 1600w, ./img/quadro-3200.webp 3200w" sizes="(max-width: 960px) 100vw, 58vw"
+               width="1600" height="1000" loading="lazy" alt="O quadro de projetos do Organizza, com uma coluna por etapa e um cartão por projeto" />
+        </figure>
+      </article>
+
+      <article class="tour__item tour__item--inverso" style="--cor: var(--contrato)">
+        <div class="tour__texto">
+          <h2>O dia começa sabendo o que fazer.</h2>
+          <p>O Hoje junta o que pede você: os projetos em foco, a próxima ação de cada um, o que o cliente ainda não mandou e os arquivos que chegaram.</p>
+          <ul class="tour__lista">
+            <li>"Pedir ao cliente" com a mensagem do WhatsApp pronta</li>
+            <li>A versão nova que ainda não foi para o cliente, lembrada</li>
+            <li>Planejar o dia de manhã, fechar o dia à tarde</li>
+          </ul>
+        </div>
+        <figure class="tela tela--campo">
+          <img src="./img/hoje-1600.webp" srcset="./img/hoje-1600.webp 1600w, ./img/hoje-3200.webp 3200w" sizes="(max-width: 960px) 100vw, 58vw"
+               width="1600" height="1000" loading="lazy" alt="O Hoje do Organizza, com dois projetos em foco, a próxima ação de cada um e o que falta para avançar" />
+        </figure>
+      </article>
+
+      <article class="tour__item" style="--cor: var(--producao)">
+        <div class="tour__texto">
+          <h2>Tudo de um cliente numa página.</h2>
+          <p>Os projetos, as etapas, os arquivos por tipo, as tarefas e o histórico. E a pasta do cliente no disco, do mesmo jeito que o app mostra.</p>
+          <ul class="tour__lista">
+            <li>O que já foi enviado, e de qual versão</li>
+            <li>A pasta no disco a um clique</li>
+            <li>O histórico de tudo o que aconteceu</li>
+          </ul>
+        </div>
+        <figure class="tela tela--campo">
+          <img src="./img/cliente-1600.webp" srcset="./img/cliente-1600.webp 1600w, ./img/cliente-3200.webp 3200w" sizes="(max-width: 960px) 100vw, 58vw"
+               width="1600" height="1000" loading="lazy" alt="A página de um cliente no Organizza, com o projeto em produção, os arquivos por tipo e a pasta no disco" />
+        </figure>
+      </article>
+      <p class="exemplo tour__exemplo">Telas do app com clientes de exemplo.</p>
+    </section>
+
+    <!-- 5. Confiança: a faixa clara, porque é a parte que se lê com calma. -->
+    <section class="sua" aria-labelledby="sua-titulo">
+      <div class="sua__dentro">
+        <h2 id="sua-titulo">Seus arquivos continuam seus.</h2>
+        <div class="sua__grade">
+          <div>
+            <h3>Uma pasta no seu disco</h3>
+            <p>Uma por cliente, uma por projeto, uma por tipo. Abre no Explorador como qualquer outra.</p>
+          </div>
+          <div>
+            <h3>Funciona sem internet</h3>
+            <p>No computador, tudo funciona desconectado. A sincronização espera a internet voltar.</p>
+          </div>
+          <div>
+            <h3>Legível se você sair</h3>
+            <p>Os nomes dizem o que cada arquivo é. Se um dia você deixar o app, a pasta continua organizada.</p>
+          </div>
+          <div>
+            <h3>Sem servidor nosso</h3>
+            <p>Os computadores conversam pela sua conta do Google Drive. Seus clientes e arquivos não passam por nós.</p>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- 6. A adoção: o trabalho de anos vem junto. -->
     <section class="adocao" aria-labelledby="adocao-titulo">
-      <h2 id="adocao-titulo">Os anos de trabalho vêm junto.</h2>
+      <h2 id="adocao-titulo">Traga os anos de trabalho de uma vez.</h2>
       <p class="adocao__texto">
-        Aponte a pasta de clientes que você já tem. O app propõe um cliente para cada subpasta e um projeto para
-        cada pasta de dentro, você confere, e ele organiza — copiando, e deixando os originais onde estão.
+        Aponte a pasta de clientes que você já tem. O app propõe um cliente para cada subpasta e um projeto para cada
+        pasta de dentro, você confere, e ele organiza — copiando, e deixando os originais onde estão.
       </p>
       <div class="adocao__antes-depois">
         <div class="adocao__lado">
@@ -143,55 +252,83 @@
           </ul>
         </div>
       </div>
-      <p class="adocao__fim">
-        No fim, o app diz o que fez: “Organizei 1.284 arquivos, em 37 clientes e 52 projetos. 79% foram pelo nome ou
-        pelo formato; o resto, pelo tipo mais provável, para você conferir.”
-      </p>
-      <p class="exemplo">Pastas, nomes e números de exemplo. Os nomes novos saem da regra do próprio app.</p>
+      <p class="exemplo">Pastas e nomes de exemplo. Os nomes novos saem da regra do próprio app.</p>
     </section>
 
-    <section class="dia" aria-labelledby="dia-titulo">
-      <h2 id="dia-titulo">E o dia sabe o que falta.</h2>
-      <p class="dia__texto">
-        O Hoje junta o que pede você: o documento que falta para a etapa andar, a versão nova que ainda não foi para
-        o cliente, a entrega que ficou apertada.
-      </p>
-      <ul class="dia__linhas" aria-label="Exemplo do Hoje">
-        <li><span class="dia__hora">9:40</span><span>Pedido a Ana há 4 dias: fotos do ambiente.</span><em>Pedir de novo</em></li>
-        <li><span class="dia__hora">11:15</span><span>Versão nova do 3D do closet ainda não enviada a Ricardo.</span><em>Marcar enviada</em></li>
-        <li><span class="dia__hora">16:30</span><span>Entrega do apartamento em 05/10 · apertado.</span><em>Ver o projeto</em></li>
-      </ul>
-      <p class="exemplo dia__exemplo">Exemplo do Hoje, com as frases que o app usa.</p>
+    <!-- 7. Os planos. -->
+    <section class="planos" id="planos" aria-labelledby="planos-titulo">
+      <h2 id="planos-titulo">Comece grátis. Passe para o Pro quando trabalhar em mais de um lugar.</h2>
+      <div class="planos__grade">
+        <article class="plano">
+          <h3>Grátis</h3>
+          <p class="plano__preco"><b>R$ 0</b></p>
+          <p class="plano__para">Para organizar tudo num computador.</p>
+          <ul class="plano__lista">
+            <li>A Entrada que organiza o que chega</li>
+            <li>Clientes, projetos e as etapas do seu ofício</li>
+            <li>O Hoje e a semana</li>
+            <li>Notas, tarefas e diagramas</li>
+            <li>A pasta que você já tem, trazida de uma vez</li>
+            <li>Cópia de segurança diária no computador</li>
+          </ul>
+          <a class="botao botao--grande plano__botao" href="https://docs.google.com/forms/d/e/1FAIpQLSepyDrJO37RKZ0zxdpPHEn-aTGBo5G7R-Lo_7ZwaOTp64ZHNw/viewform" target="_blank" rel="noopener" data-convite-link>Pedir convite</a>
+        </article>
+
+        <article class="plano plano--pro">
+          <h3>Pro</h3>
+          <p class="plano__preco"><b>R$ 39</b><span>por mês</span></p>
+          <p class="plano__anual">ou R$ 390 por ano — dois meses de presente</p>
+          <p class="plano__para">Para quem trabalha no escritório, em casa e na obra.</p>
+          <ul class="plano__lista">
+            <li>Tudo do Grátis</li>
+            <li>O mesmo acervo em vários computadores</li>
+            <li>Consultar o acervo pelo navegador, de qualquer lugar</li>
+            <li>Cópia de segurança diária no seu Drive</li>
+            <li><span>A foto do celular direto na Entrada <em>em breve</em></span></li>
+          </ul>
+          <a class="botao botao--forte botao--grande plano__botao" href="https://docs.google.com/forms/d/e/1FAIpQLSepyDrJO37RKZ0zxdpPHEn-aTGBo5G7R-Lo_7ZwaOTp64ZHNw/viewform" target="_blank" rel="noopener" data-convite-link>Pedir convite</a>
+        </article>
+      </div>
+      <p class="planos__nota">Estamos abrindo aos poucos: o pagamento do Pro abre junto com os convites.</p>
     </section>
 
-    <section class="conta" aria-labelledby="conta-titulo">
-      <h2 id="conta-titulo">Sem servidor nosso no meio.</h2>
-      <p>
-        Os computadores conversam pela sua conta do Google Drive, e o que eles trocam fica lá, na sua conta. O
-        Organizza não guarda seus arquivos nem seus clientes em lugar nenhum além do seu computador e da sua nuvem.
-      </p>
+    <!-- 8. As dúvidas de quem está decidindo. -->
+    <section class="duvidas" id="duvidas" aria-labelledby="duvidas-titulo">
+      <h2 id="duvidas-titulo">Dúvidas</h2>
+      <div class="duvidas__lista">
+        <details>
+          <summary>Preciso mudar meu jeito de trabalhar?</summary>
+          <p>Não. Você continua recebendo pelo WhatsApp e mandando pelo WhatsApp. O que muda é que o arquivo não fica perdido na conversa: ele vai para a pasta do cliente certo, com um nome que diz o que é.</p>
+        </details>
+        <details>
+          <summary>E se eu parar de usar o app?</summary>
+          <p>A pasta continua no seu disco, organizada, com nomes legíveis. Nada fica preso dentro do Organizza.</p>
+        </details>
+        <details>
+          <summary>Funciona sem internet?</summary>
+          <p>No computador, sim, tudo. No Pro, o que você fizer sem internet sobe para os outros computadores quando ela voltar.</p>
+        </details>
+        <details>
+          <summary>Funciona no Mac ou no celular?</summary>
+          <p>O app é para Windows. No Pro, dá para consultar o acervo pelo navegador, em qualquer computador. O celular está sendo feito.</p>
+        </details>
+        <details>
+          <summary>Meus clientes veem alguma coisa?</summary>
+          <p>Não. O app é seu. Quando é hora de pedir um documento ao cliente, ele prepara a mensagem e você manda pelo seu WhatsApp.</p>
+        </details>
+        <details>
+          <summary>Onde ficam meus dados?</summary>
+          <p>No seu computador e, no Pro, na sua conta do Google Drive. O Organizza não tem um servidor com os seus clientes e arquivos.</p>
+        </details>
+      </div>
     </section>
 
-    <section class="convite" id="convite" aria-labelledby="convite-titulo">
-      <h2 id="convite-titulo">Estamos abrindo aos poucos.</h2>
-      <p id="convite-fechado">A lista de espera abre nos próximos dias. Até lá o formulário fica fechado, porque ainda não guarda nada.</p>
-      <form class="convite__form" data-convite novalidate aria-describedby="convite-fechado">
-        <label class="campo">
-          <span>E-mail</span>
-          <input type="email" name="email" autocomplete="email" required placeholder="voce@exemplo.com" disabled />
-        </label>
-        <label class="campo">
-          <span>O que você faz</span>
-          <select name="oficio" disabled>
-            <option>Marcenaria e móveis planejados</option>
-            <option>Arquitetura</option>
-            <option>Design de interiores</option>
-            <option>Fotografia</option>
-            <option>Outro</option>
-          </select>
-        </label>
-        <button class="botao botao--forte botao--grande" type="submit" disabled>Pedir convite</button>
-      </form>
+    <!-- 9. O fechamento. -->
+    <section class="convite campo campo--jade" id="convite" aria-labelledby="convite-titulo">
+      <h2 id="convite-titulo">Pare de procurar arquivo.</h2>
+      <p data-convite-texto>Estamos abrindo aos poucos. Peça o seu convite: você recebe quando a sua vez chegar.</p>
+      <a class="botao botao--escuro botao--grande convite__botao" href="https://docs.google.com/forms/d/e/1FAIpQLSepyDrJO37RKZ0zxdpPHEn-aTGBo5G7R-Lo_7ZwaOTp64ZHNw/viewform" target="_blank" rel="noopener" data-convite-principal>Pedir convite</a>
+      <p class="convite__nota" data-convite-nota>Grátis no computador. Pro por R$ 39 por mês.</p>
     </section>
   </main>
 
