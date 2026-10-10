@@ -6,337 +6,814 @@
   <meta name="robots" content="noindex, nofollow" />
   <title>Organizza — cada arquivo no lugar certo</title>
   <meta name="description" content="Cada arquivo no lugar certo. Cada cliente em dia. Do WhatsApp à pasta certa, sem você organizar nada." />
-  <meta name="theme-color" content="#0D1014" />
+  <meta name="theme-color" content="#FFFFFF" />
   <link rel="preload" href="./inter.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@28..144,600&display=swap" />
   <link rel="stylesheet" href="./estilo.css" />
 </head>
 <body>
+  <!-- Os ícones da página: os mesmos traços do app (Lucide), desenhados uma vez. -->
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-seta" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+    <symbol id="i-mais" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5v14"/></symbol>
+    <symbol id="i-busca" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+    <symbol id="i-enviar" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m17 8-5-5-5 5"/><path d="M12 3v12"/></symbol>
+    <symbol id="i-sino" viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></symbol>
+    <symbol id="i-pessoa" viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></symbol>
+    <symbol id="i-hoje" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></symbol>
+    <symbol id="i-entrada" viewBox="0 0 24 24"><path d="M22 12h-6l-2 3h-4l-2-3H2"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></symbol>
+    <symbol id="i-projetos" viewBox="0 0 24 24"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"/><path d="M8 10v4"/><path d="M12 10v2"/><path d="M16 10v6"/></symbol>
+    <symbol id="i-clientes" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="i-arquivos" viewBox="0 0 24 24"><path d="M20 7h-3a2 2 0 0 1-2-2V2"/><path d="M9 18a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h7l4 4v10a2 2 0 0 1-2 2Z"/><path d="M3 7.6v12.8A1.6 1.6 0 0 0 4.6 22h9.8"/></symbol>
+    <symbol id="i-nota" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/></symbol>
+    <symbol id="i-tarefa" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-diagrama" viewBox="0 0 24 24"><rect width="8" height="8" x="3" y="3" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect width="8" height="8" x="13" y="13" rx="2"/></symbol>
+    <symbol id="i-visao" viewBox="0 0 24 24"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></symbol>
+    <symbol id="i-ajustes" viewBox="0 0 24 24"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-pasta" viewBox="0 0 24 24"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></symbol>
+    <symbol id="i-relogio" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="i-clipe" viewBox="0 0 24 24"><path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"/></symbol>
+    <symbol id="i-quadro" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 3v18"/><path d="M15 3v18"/></symbol>
+    <symbol id="i-lista" viewBox="0 0 24 24"><path d="M8 6h13"/><path d="M8 12h13"/><path d="M8 18h13"/><path d="M3 6h.01"/><path d="M3 12h.01"/><path d="M3 18h.01"/></symbol>
+    <symbol id="i-tabela" viewBox="0 0 24 24"><path d="M12 3v18"/><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M3 15h18"/></symbol>
+    <symbol id="i-agenda" viewBox="0 0 24 24"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></symbol>
+    <symbol id="i-ampulheta" viewBox="0 0 24 24"><path d="M5 22h14"/><path d="M5 2h14"/><path d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22"/><path d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2"/></symbol>
+    <symbol id="i-subir" viewBox="0 0 24 24"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></symbol>
+    <symbol id="i-conversa" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+    <symbol id="i-alvo" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+    <symbol id="i-carteira" viewBox="0 0 24 24"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></symbol>
+    <symbol id="i-lapis" viewBox="0 0 24 24"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/></symbol>
+    <symbol id="i-lua" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+    <symbol id="i-duvida" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></symbol>
+    <symbol id="i-orcamento" viewBox="0 0 24 24"><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M8 6h8"/><path d="M16 14v4"/><path d="M16 10h.01"/><path d="M12 10h.01"/><path d="M8 10h.01"/><path d="M12 14h.01"/><path d="M8 14h.01"/><path d="M12 18h.01"/><path d="M8 18h.01"/></symbol>
+    <symbol id="i-contrato" viewBox="0 0 24 24"><path d="M12.5 22H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v9.5"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M13.378 15.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z"/></symbol>
+    <symbol id="i-pagamento" viewBox="0 0 24 24"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/></symbol>
+    <symbol id="i-foto" viewBox="0 0 24 24"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></symbol>
+    <symbol id="i-video" viewBox="0 0 24 24"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></symbol>
+    <symbol id="i-audio" viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><path d="M12 19v3"/></symbol>
+    <symbol id="i-olho" viewBox="0 0 24 24"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-bandeira" viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><path d="M4 22v-7"/></symbol>
+    <symbol id="i-pegar" viewBox="0 0 24 24"><circle cx="9" cy="6" r="1"/><circle cx="9" cy="12" r="1"/><circle cx="9" cy="18" r="1"/><circle cx="15" cy="6" r="1"/><circle cx="15" cy="12" r="1"/><circle cx="15" cy="18" r="1"/></symbol>
+    <symbol id="i-pontos" viewBox="0 0 24 24"><circle cx="12" cy="5" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="12" cy="19" r="1"/></symbol>
+    <symbol id="i-recolher" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 3v18"/><path d="m16 15-3-3 3-3"/></symbol>
+    <symbol id="i-pausa" viewBox="0 0 24 24"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></symbol>
+    <symbol id="i-toca" viewBox="0 0 24 24"><path d="M7 4.5v15l12-7.5Z"/></symbol>
+    <symbol id="i-de-novo" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></symbol>
+  </svg>
+
   <a class="pular" href="#convite">Ir para o convite</a>
 
-  <header class="topo">
-    <a class="marca" href="./" aria-label="Organizza, início">
-      <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">
-        <mask id="corte" maskUnits="userSpaceOnUse" x="0" y="0" width="64" height="64">
-          <rect width="64" height="64" fill="#fff" />
-          <path d="M8 39 41 6" stroke="#000" stroke-width="7" stroke-linecap="round" />
-        </mask>
-        <path d="M21 10h15l18 18v12L40 54H22L10 42V22Z" fill="none" stroke="currentColor" stroke-width="10" stroke-linejoin="round" mask="url(#corte)" />
-      </svg>
-      <span>Organizza</span>
-    </a>
-    <nav class="topo__secoes" aria-label="Seções">
-      <a href="#como">Como funciona</a>
-      <a href="#planos">Planos</a>
-      <a href="#duvidas">Dúvidas</a>
-    </nav>
-    <nav class="topo__acoes" aria-label="Conta">
-      <a class="link" href="/">Entrar</a>
-      <a class="botao botao--forte" href="https://docs.google.com/forms/d/e/1FAIpQLSepyDrJO37RKZ0zxdpPHEn-aTGBo5G7R-Lo_7ZwaOTp64ZHNw/viewform" target="_blank" rel="noopener" data-convite-link>Pedir convite</a>
-    </nav>
+  <header class="topo" data-topo>
+    <div class="topo__dentro">
+      <a class="marca" href="./" aria-label="Organizza, início">
+        <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+          <mask id="corte" maskUnits="userSpaceOnUse" x="0" y="0" width="64" height="64">
+            <rect width="64" height="64" fill="#fff" />
+            <path d="M8 39 41 6" stroke="#000" stroke-width="7" stroke-linecap="round" />
+          </mask>
+          <path d="M21 10h15l18 18v12L40 54H22L10 42V22Z" fill="none" stroke="currentColor" stroke-width="10" stroke-linejoin="round" mask="url(#corte)" />
+        </svg>
+        <span>Organizza</span>
+      </a>
+      <nav class="topo__secoes" aria-label="Seções">
+        <a href="#como">Como funciona</a>
+        <a href="#dentro">Por dentro</a>
+        <a href="#planos">Planos</a>
+        <a href="#duvidas">Dúvidas</a>
+      </nav>
+      <nav class="topo__acoes" aria-label="Conta">
+        <a class="topo__entrar" href="/">Entrar</a>
+        <a class="botao botao--tinta botao--miudo" href="https://docs.google.com/forms/d/e/1FAIpQLSepyDrJO37RKZ0zxdpPHEn-aTGBo5G7R-Lo_7ZwaOTp64ZHNw/viewform" target="_blank" rel="noopener" data-convite>Pedir convite</a>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <!-- 1. A abertura: a promessa, e o app fazendo o que ela diz. -->
-    <section class="abertura" aria-labelledby="promessa">
-      <div class="abertura__texto">
-        <h1 id="promessa">Cada arquivo no lugar certo. <span>Cada cliente em dia.</span></h1>
-        <p class="abertura__como">Do WhatsApp à pasta certa, sem você organizar nada.</p>
-        <p class="abertura__para">
-          O Organizza junta os arquivos, os clientes e os projetos de quem trabalha por encomenda — marcenaria,
-          arquitetura, interiores, fotografia — numa pasta que continua sua.
-        </p>
-        <div class="abertura__acoes">
-          <a class="botao botao--forte botao--grande" href="https://docs.google.com/forms/d/e/1FAIpQLSepyDrJO37RKZ0zxdpPHEn-aTGBo5G7R-Lo_7ZwaOTp64ZHNw/viewform" target="_blank" rel="noopener" data-convite-link>Pedir convite</a>
-          <a class="link link--seta" href="#como">Ver como funciona</a>
-        </div>
-        <p class="abertura__nota">Grátis no computador, para Windows.</p>
-      </div>
-
-      <div class="abertura__palco">
-        <!-- As colunas das etapas, as mesmas do quadro, ampliadas: a cor do app de verdade. -->
-        <div class="colunas" aria-hidden="true">
-          <span style="--cor: var(--lead)"></span><span style="--cor: var(--medicao)"></span><span style="--cor: var(--projeto)"></span>
-          <span style="--cor: var(--aprovacao)"></span><span style="--cor: var(--contrato)"></span><span style="--cor: var(--producao)"></span>
-        </div>
-        <figure class="tela tela--abertura">
-          <img src="./img/quadro-1600.webp" srcset="./img/quadro-1600.webp 1600w, ./img/quadro-3200.webp 3200w"
-               sizes="(max-width: 960px) 100vw, 60vw" width="1600" height="1000"
-               alt="O quadro de projetos do Organizza, com os projetos por etapa: Lead, Medição, Projeto 3D, Contrato e sinal" />
-        </figure>
-
-        <!-- A Entrada, ao vivo: cada arquivo chega com o nome do celular e sai com o nome e o lugar certos. -->
-        <figure class="entrada" aria-label="Exemplo da Entrada guardando arquivos" data-entrada>
-          <div class="entrada__barra">
-            <span class="entrada__titulo">Entrada</span>
-            <span class="entrada__conta"><b data-restam>5</b> esperando</span>
+    <!-- 1. A abertura: a promessa, e os arquivos soltos que a rolagem arruma. -->
+    <section class="abertura" id="como" aria-labelledby="promessa" data-abertura>
+      <div class="abertura__fixo">
+        <div class="abertura__texto">
+          <h1 id="promessa">Cada arquivo no lugar certo. <span>Cada cliente em dia.</span></h1>
+          <p class="abertura__como">Do WhatsApp à pasta certa, sem você organizar nada.</p>
+          <div class="abertura__acoes">
+            <a class="botao botao--tinta" href="https://docs.google.com/forms/d/e/1FAIpQLSepyDrJO37RKZ0zxdpPHEn-aTGBo5G7R-Lo_7ZwaOTp64ZHNw/viewform" target="_blank" rel="noopener" data-convite>Pedir convite</a>
+            <a class="link-seta" href="#dentro">Ver o app por dentro <svg aria-hidden="true"><use href="#i-seta" /></svg></a>
           </div>
-          <ol class="entrada__fila" data-fila>
-            <li class="arq" data-item>
-              <span class="arq__nome"><span class="arq__antes">IMG-20260926-WA0012.jpg</span><span class="arq__depois">FT_cozinha_frente_2026-09-26.jpg</span></span>
-              <span class="arq__palpite">Fotos · Ana Prado · cozinha</span>
-              <span class="arq__onde">M-0001_ana-prado\01_cozinha-lavabo\06_fotos</span>
+          <p class="abertura__nota">App para Windows. Grátis no computador. Também para a casa e os estudos.</p>
+
+          <ol class="passos" aria-label="Como funciona" data-passos>
+            <li class="passos__item" data-passo="0">
+              <button type="button" class="passos__botao">
+                <span class="passos__n" aria-hidden="true">1</span>
+                <span class="passos__texto"><b>Chega</b> Foto, PDF e áudio, do jeito que o WhatsApp mandou.</span>
+              </button>
+              <span class="passos__trilho" aria-hidden="true"><i></i></span>
             </li>
-            <li class="arq" data-item>
-              <span class="arq__nome"><span class="arq__antes">planta final (2).pdf</span><span class="arq__depois">MD_cozinha_2026-09-26.pdf</span></span>
-              <span class="arq__palpite">Medidas · Ana Prado · cozinha</span>
-              <span class="arq__onde">M-0001_ana-prado\01_cozinha-lavabo\01_medidas</span>
+            <li class="passos__item" data-passo="1">
+              <button type="button" class="passos__botao">
+                <span class="passos__n" aria-hidden="true">2</span>
+                <span class="passos__texto"><b>Você confere</b> O app diz o que cada um é. Você confirma ou corrige.</span>
+              </button>
+              <span class="passos__trilho" aria-hidden="true"><i></i></span>
             </li>
-            <li class="arq" data-item>
-              <span class="arq__nome"><span class="arq__antes">render closet FINAL (1).png</span><span class="arq__depois">3D_closet_2026-09-26.png</span></span>
-              <span class="arq__palpite">Projeto 3D · Ricardo Marques · closet</span>
-              <span class="arq__onde">M-0003_ricardo-marques\01_closet-dormitorio\02_projeto-3d</span>
-            </li>
-            <li class="arq" data-item>
-              <span class="arq__nome"><span class="arq__antes">contrato assinado.pdf</span><span class="arq__depois">CT_contrato-assinado_2026-09-26.pdf</span></span>
-              <span class="arq__palpite">Contrato · Família Duarte</span>
-              <span class="arq__onde">M-0005_familia-duarte\01_apartamento-completo\04_contrato</span>
-            </li>
-            <li class="arq" data-item>
-              <span class="arq__nome"><span class="arq__antes">Orçamento_Duarte_REV3.pdf</span><span class="arq__depois">OR_orcamento-duarte-rev3_2026-09-26.pdf</span></span>
-              <span class="arq__palpite">Orçamento · Família Duarte</span>
-              <span class="arq__onde">M-0005_familia-duarte\01_apartamento-completo\03_orcamento</span>
+            <li class="passos__item" data-passo="2">
+              <button type="button" class="passos__botao">
+                <span class="passos__n" aria-hidden="true">3</span>
+                <span class="passos__texto"><b>Está no lugar</b> Com um nome que diz o que é, na pasta do cliente.</span>
+              </button>
+              <span class="passos__trilho" aria-hidden="true"><i></i></span>
             </li>
           </ol>
-          <div class="entrada__pasta" aria-hidden="true">
-            <span class="entrada__raiz">D:\Organizza\marcenaria\</span>
-            <span class="entrada__ultimo" data-ultimo>&nbsp;</span>
+        </div>
+
+        <!-- O palco: seis arquivos com o nome que o celular deu. A rolagem os
+             leva à Entrada, mostra o que o app entendeu e os guarda nas pastas. -->
+        <div class="palco" data-palco>
+          <p class="so-leitor">
+            Exemplo com dados fictícios: seis arquivos chegam com nomes como IMG-20260926-WA0012.jpg e orçamento FINAL certo (2).pdf.
+            O app diz o que cada um é e de qual cliente, e eles vão para as pastas dos clientes com nomes como
+            OR_final_2026-09-26.pdf, dentro de T-0007_studio-vera, projeto 01_loja-nova, pasta 01_orcamento.
+          </p>
+
+          <div class="janela" data-janela aria-hidden="true">
+            <div class="janela__topo">
+              <svg class="janela__icone"><use href="#i-entrada" /></svg>
+              <span class="janela__titulo">Entrada</span>
+              <span class="janela__conta" data-conta>6 esperando</span>
+            </div>
+            <p class="janela__frase" data-frase>Chegaram 6 arquivos. Entendi assim:</p>
+            <ol class="janela__vagas">
+              <li class="vaga" data-vaga></li><li class="vaga" data-vaga></li><li class="vaga" data-vaga></li>
+              <li class="vaga" data-vaga></li><li class="vaga" data-vaga></li><li class="vaga" data-vaga></li>
+            </ol>
+            <div class="janela__pe">
+              <span class="janela__pronto" data-pronto>Confira antes de guardar</span>
+              <span class="janela__guardar" data-guardar><svg><use href="#i-check" /></svg>Guardar o pronto</span>
+            </div>
           </div>
-        </figure>
+
+          <div class="pastas" aria-hidden="true">
+            <section class="pasta" data-pasta>
+              <header class="pasta__cabeca">
+                <span class="pasta__cliente">T-0007_studio-vera</span>
+                <span class="pasta__projeto">01_loja-nova</span>
+              </header>
+              <ul class="pasta__folha">
+                <li class="pasta__linha" data-linha="0" style="--tipo: var(--t-orcamento)"><b>01_orcamento</b><span>OR_final_2026-09-26.pdf</span></li>
+                <li class="pasta__linha" data-linha="1" style="--tipo: var(--t-contrato)"><b>02_contrato</b><span>CT_assinado_2026-09-26.pdf</span></li>
+                <li class="pasta__linha" data-linha="2" style="--tipo: var(--t-pagamento)"><b>03_pagamentos</b><span>PG_sinal_2026-09-26.jpeg</span></li>
+              </ul>
+              <span class="pasta__conta" data-conta-pasta="3">3</span>
+            </section>
+            <section class="pasta" data-pasta>
+              <header class="pasta__cabeca">
+                <span class="pasta__cliente">T-0012_clinica-vita</span>
+                <span class="pasta__projeto">01_campanha-de-outubro</span>
+              </header>
+              <ul class="pasta__folha">
+                <li class="pasta__linha" data-linha="3" style="--tipo: var(--t-audio)"><b>06_audios</b><span>AU_recado-do-cliente_2026-09-26.opus</span></li>
+              </ul>
+              <span class="pasta__conta" data-conta-pasta="1">1</span>
+            </section>
+            <section class="pasta" data-pasta>
+              <header class="pasta__cabeca">
+                <span class="pasta__cliente">T-0015_ana-prado</span>
+                <span class="pasta__projeto">01_casamento</span>
+              </header>
+              <ul class="pasta__folha">
+                <li class="pasta__linha" data-linha="4" style="--tipo: var(--t-foto)"><b>04_fotos</b><span>FT_referencia_2026-09-26.jpg</span></li>
+                <li class="pasta__linha" data-linha="5" style="--tipo: var(--t-video)"><b>05_videos</b><span>VD_local_2026-09-25.mp4</span></li>
+              </ul>
+              <span class="pasta__conta" data-conta-pasta="2">2</span>
+            </section>
+          </div>
+
+          <!-- Os seis arquivos. A ordem é a da pasta de destino. -->
+          <article class="ficha" data-ficha="0" data-pasta-alvo="0" style="--tipo: var(--t-orcamento)" aria-hidden="true">
+            <span class="miniatura miniatura--papel">
+              <svg viewBox="0 0 40 40"><rect x="8" y="4" width="24" height="32" rx="2.5" class="m-folha"/><rect x="11.5" y="8.5" width="11" height="2.6" rx="1" class="m-cor"/><rect x="11.5" y="14" width="17" height="1.5" rx=".75" class="m-linha"/><rect x="11.5" y="17.5" width="17" height="1.5" rx=".75" class="m-linha"/><rect x="11.5" y="21" width="17" height="1.5" rx=".75" class="m-linha"/><rect x="11.5" y="24.5" width="17" height="1.5" rx=".75" class="m-linha"/><rect x="20" y="29.5" width="8.5" height="2.4" rx="1" class="m-forte"/></svg>
+            </span>
+            <span class="ficha__nomes">
+              <span class="ficha__antes">orçamento FINAL certo (2).pdf</span>
+              <span class="ficha__depois">OR_final_2026-09-26.pdf</span>
+            </span>
+            <span class="ficha__linha2">
+              <span class="ficha__meta">WhatsApp · 214 KB</span>
+              <span class="ficha__palpite"><i></i>Orçamento · Studio Vera</span>
+            </span>
+          </article>
+
+          <article class="ficha" data-ficha="1" data-pasta-alvo="0" style="--tipo: var(--t-contrato)" aria-hidden="true">
+            <span class="miniatura miniatura--papel">
+              <svg viewBox="0 0 40 40"><rect x="8" y="4" width="24" height="32" rx="2.5" class="m-folha"/><rect x="11.5" y="8.5" width="17" height="1.5" rx=".75" class="m-linha"/><rect x="11.5" y="12" width="17" height="1.5" rx=".75" class="m-linha"/><rect x="11.5" y="15.5" width="14" height="1.5" rx=".75" class="m-linha"/><rect x="11.5" y="19" width="17" height="1.5" rx=".75" class="m-linha"/><path d="M12 29.5c2-3.2 3.4-3.8 3.9-2.4.5 1.5-1.2 3.4.4 3.1 1.5-.3 2.3-3.6 3.5-3.2 1 .4.2 2.6 1.5 2.5 1-.1 1.6-1.4 2.6-1.6" class="m-assinatura"/><rect x="11.5" y="31.6" width="17" height="1" rx=".5" class="m-linha"/></svg>
+            </span>
+            <span class="ficha__nomes">
+              <span class="ficha__antes">contrato assinado.pdf</span>
+              <span class="ficha__depois">CT_assinado_2026-09-26.pdf</span>
+            </span>
+            <span class="ficha__linha2">
+              <span class="ficha__meta">WhatsApp · 1,2 MB</span>
+              <span class="ficha__palpite"><i></i>Contrato · Studio Vera</span>
+            </span>
+          </article>
+
+          <article class="ficha" data-ficha="2" data-pasta-alvo="0" style="--tipo: var(--t-pagamento)" aria-hidden="true">
+            <span class="miniatura miniatura--tela">
+              <svg viewBox="0 0 40 40"><rect x="11" y="3" width="18" height="34" rx="3.5" class="m-celular"/><circle cx="20" cy="12.5" r="3.6" class="m-pix"/><path d="m18.4 12.6 1.1 1.1 2.2-2.3" class="m-pix-check"/><rect x="14.5" y="19" width="11" height="2.4" rx="1" class="m-forte"/><rect x="15.5" y="23.5" width="9" height="1.3" rx=".65" class="m-linha"/><rect x="15.5" y="26.3" width="9" height="1.3" rx=".65" class="m-linha"/><rect x="15.5" y="29.1" width="6" height="1.3" rx=".65" class="m-linha"/></svg>
+            </span>
+            <span class="ficha__nomes">
+              <span class="ficha__antes">comprovante.jpeg</span>
+              <span class="ficha__depois">PG_sinal_2026-09-26.jpeg</span>
+            </span>
+            <span class="ficha__linha2">
+              <span class="ficha__meta">WhatsApp · 96 KB</span>
+              <span class="ficha__palpite"><i></i>Pagamentos · Studio Vera</span>
+            </span>
+          </article>
+
+          <article class="ficha" data-ficha="3" data-pasta-alvo="1" style="--tipo: var(--t-audio)" aria-hidden="true">
+            <span class="miniatura miniatura--som">
+              <svg viewBox="0 0 40 40"><g class="m-onda"><rect x="8" y="17" width="2" height="6" rx="1"/><rect x="11.5" y="13" width="2" height="14" rx="1"/><rect x="15" y="15.5" width="2" height="9" rx="1"/><rect x="18.5" y="10" width="2" height="20" rx="1"/><rect x="22" y="14" width="2" height="12" rx="1"/><rect x="25.5" y="16.5" width="2" height="7" rx="1"/><rect x="29" y="12.5" width="2" height="15" rx="1"/></g></svg>
+            </span>
+            <span class="ficha__nomes">
+              <span class="ficha__antes">PTT-20260926-WA0007.opus</span>
+              <span class="ficha__depois">AU_recado-do-cliente_2026-09-26.opus</span>
+            </span>
+            <span class="ficha__linha2">
+              <span class="ficha__meta">Áudio · 0:42</span>
+              <span class="ficha__palpite"><i></i>Áudios · Clínica Vita</span>
+            </span>
+          </article>
+
+          <article class="ficha" data-ficha="4" data-pasta-alvo="2" style="--tipo: var(--t-foto)" aria-hidden="true">
+            <span class="miniatura miniatura--foto">
+              <svg viewBox="0 0 40 40"><rect x="3" y="3" width="16.5" height="20" rx="2.5" class="m-c1"/><rect x="20.5" y="3" width="16.5" height="12" rx="2.5" class="m-c2"/><rect x="20.5" y="16" width="16.5" height="21" rx="2.5" class="m-c3"/><rect x="3" y="24" width="16.5" height="13" rx="2.5" class="m-c4"/><circle cx="11.2" cy="12" r="3.4" class="m-c5"/></svg>
+            </span>
+            <span class="ficha__nomes">
+              <span class="ficha__antes">IMG-20260926-WA0012.jpg</span>
+              <span class="ficha__depois">FT_referencia_2026-09-26.jpg</span>
+            </span>
+            <span class="ficha__linha2">
+              <span class="ficha__meta">WhatsApp · 1,8 MB</span>
+              <span class="ficha__palpite"><i></i>Fotos · Ana Prado</span>
+            </span>
+          </article>
+
+          <article class="ficha" data-ficha="5" data-pasta-alvo="2" style="--tipo: var(--t-video)" aria-hidden="true">
+            <span class="miniatura miniatura--video">
+              <svg viewBox="0 0 40 40"><path d="M16.5 13.5v13l10.5-6.5z" class="m-play"/><rect x="6" y="32" width="28" height="1.6" rx=".8" class="m-barra"/><rect x="6" y="32" width="11" height="1.6" rx=".8" class="m-barra-feita"/></svg>
+            </span>
+            <span class="ficha__nomes">
+              <span class="ficha__antes">VID-20260925-WA0003.mp4</span>
+              <span class="ficha__depois">VD_local_2026-09-25.mp4</span>
+            </span>
+            <span class="ficha__linha2">
+              <span class="ficha__meta">Vídeo · 1:12</span>
+              <span class="ficha__palpite"><i></i>Vídeos · Ana Prado</span>
+            </span>
+          </article>
+
+          <button type="button" class="palco__de-novo" data-pausa hidden>
+            <svg aria-hidden="true"><use href="#i-pausa" /></svg><span>Pausar</span>
+          </button>
+          <button type="button" class="palco__de-novo" data-de-novo hidden>
+            <svg aria-hidden="true"><use href="#i-de-novo" /></svg>Ver de novo
+          </button>
+        </div>
       </div>
-      <p class="exemplo abertura__exemplo">Telas do app com clientes de exemplo. Os nomes de arquivo saem da regra do próprio app.</p>
+      <p class="exemplo abertura__exemplo">Exemplo com clientes fictícios. Os nomes novos saem da regra do próprio app.</p>
     </section>
 
-    <!-- 2. A dor, nas palavras de quem vive. -->
-    <section class="dor campo campo--coral" aria-labelledby="dor-titulo">
-      <h2 id="dor-titulo">O WhatsApp virou a pasta do seu trabalho.</h2>
-      <ul class="dor__lista">
-        <li>
-          <code>IMG-20250312-WA0044.jpg</code>
-          <p>A foto da medição está em algum lugar da conversa de março.</p>
-        </li>
-        <li>
-          <code>orçamento FINAL certo (2).pdf</code>
-          <p>Três orçamentos com quase o mesmo nome, e nenhum diz qual o cliente aprovou.</p>
-        </li>
-        <li>
-          <code>render cozinha v4 / v5 / v5-ok</code>
-          <p>O cliente diz que aprovou a versão com a ilha. Qual era, e ele recebeu mesmo?</p>
-        </li>
-      </ul>
-      <p class="dor__virada">O Organizza põe cada coisa no lugar no momento em que ela chega — e lembra o que já foi para o cliente.</p>
-    </section>
-
-    <!-- 3. Como funciona: três passos, porque são três de verdade. -->
-    <section class="como" id="como" aria-labelledby="como-titulo">
-      <h2 id="como-titulo">Você diz o que é. O app faz o resto.</h2>
-      <ol class="passos">
-        <li>
-          <span class="passos__n">1</span>
-          <h3>Chega</h3>
-          <p>Arraste do WhatsApp, cole com Ctrl V, ou deixe o "Salvar tudo" do WhatsApp cair na pasta de entrada. O app pega sozinho.</p>
-        </li>
-        <li>
-          <span class="passos__n">2</span>
-          <h3>Você confere</h3>
-          <p>O app lê o lote e diz o que acha: foto da cozinha da Ana, orçamento da Família Duarte. Você confirma com um clique ou corrige.</p>
-        </li>
-        <li>
-          <span class="passos__n">3</span>
-          <h3>Está no lugar</h3>
-          <p>O arquivo ganha um nome que diz o que é e vai para a pasta do cliente, do projeto e do tipo. No seu disco, onde você achar.</p>
-        </li>
-      </ol>
-    </section>
-
-    <!-- 4. O app por dentro: três telas de verdade. -->
-    <section class="tour" aria-label="O app por dentro">
-      <article class="tour__item" style="--cor: var(--projeto)">
-        <div class="tour__texto">
-          <h2>Todos os projetos, e em que pé está cada um.</h2>
-          <p>Um quadro com as etapas do seu ofício — medição, projeto, aprovação, produção, montagem. Cada cartão mostra a próxima ação e o que falta para andar.</p>
-          <ul class="tour__lista">
-            <li>Etapas com o nome que você usa</li>
-            <li>O documento que falta para avançar, dito antes</li>
-            <li>A capa de cada trabalho com a foto dele</li>
-          </ul>
-        </div>
-        <figure class="tela tela--campo">
-          <img src="./img/quadro-1600.webp" srcset="./img/quadro-1600.webp 1600w, ./img/quadro-3200.webp 3200w" sizes="(max-width: 960px) 100vw, 58vw"
-               width="1600" height="1000" loading="lazy" alt="O quadro de projetos do Organizza, com uma coluna por etapa e um cartão por projeto" />
-        </figure>
-      </article>
-
-      <article class="tour__item tour__item--inverso" style="--cor: var(--contrato)">
-        <div class="tour__texto">
-          <h2>O dia começa sabendo o que fazer.</h2>
-          <p>O Hoje junta o que pede você: os projetos em foco, a próxima ação de cada um, o que o cliente ainda não mandou e os arquivos que chegaram.</p>
-          <ul class="tour__lista">
-            <li>"Pedir ao cliente" com a mensagem do WhatsApp pronta</li>
-            <li>A versão nova que ainda não foi para o cliente, lembrada</li>
-            <li>Planejar o dia de manhã, fechar o dia à tarde</li>
-          </ul>
-        </div>
-        <figure class="tela tela--campo">
-          <img src="./img/hoje-1600.webp" srcset="./img/hoje-1600.webp 1600w, ./img/hoje-3200.webp 3200w" sizes="(max-width: 960px) 100vw, 58vw"
-               width="1600" height="1000" loading="lazy" alt="O Hoje do Organizza, com dois projetos em foco, a próxima ação de cada um e o que falta para avançar" />
-        </figure>
-      </article>
-
-      <article class="tour__item" style="--cor: var(--producao)">
-        <div class="tour__texto">
-          <h2>Tudo de um cliente numa página.</h2>
-          <p>Os projetos, as etapas, os arquivos por tipo, as tarefas e o histórico. E a pasta do cliente no disco, do mesmo jeito que o app mostra.</p>
-          <ul class="tour__lista">
-            <li>O que já foi enviado, e de qual versão</li>
-            <li>A pasta no disco a um clique</li>
-            <li>O histórico de tudo o que aconteceu</li>
-          </ul>
-        </div>
-        <figure class="tela tela--campo">
-          <img src="./img/cliente-1600.webp" srcset="./img/cliente-1600.webp 1600w, ./img/cliente-3200.webp 3200w" sizes="(max-width: 960px) 100vw, 58vw"
-               width="1600" height="1000" loading="lazy" alt="A página de um cliente no Organizza, com o projeto em produção, os arquivos por tipo e a pasta no disco" />
-        </figure>
-      </article>
-      <p class="exemplo tour__exemplo">Telas do app com clientes de exemplo.</p>
-    </section>
-
-    <!-- 5. Confiança: a faixa clara, porque é a parte que se lê com calma. -->
-    <section class="sua" aria-labelledby="sua-titulo">
-      <div class="sua__dentro">
-        <h2 id="sua-titulo">Seus arquivos continuam seus.</h2>
-        <div class="sua__grade">
-          <div>
-            <h3>Uma pasta no seu disco</h3>
-            <p>Uma por cliente, uma por projeto, uma por tipo. Abre no Explorador como qualquer outra.</p>
-          </div>
-          <div>
-            <h3>Funciona sem internet</h3>
-            <p>No computador, tudo funciona desconectado. A sincronização espera a internet voltar.</p>
-          </div>
-          <div>
-            <h3>Legível se você sair</h3>
-            <p>Os nomes dizem o que cada arquivo é. Se um dia você deixar o app, a pasta continua organizada.</p>
-          </div>
-          <div>
-            <h3>Sem servidor nosso</h3>
-            <p>Os computadores conversam pela sua conta do Google Drive. Seus clientes e arquivos não passam por nós.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 6. A adoção: o trabalho de anos vem junto. -->
+    <!-- 2. A adoção: a pasta de anos, antes e depois, na mesma moldura. -->
     <section class="adocao" aria-labelledby="adocao-titulo">
-      <h2 id="adocao-titulo">Traga os anos de trabalho de uma vez.</h2>
-      <p class="adocao__texto">
-        Aponte a pasta de clientes que você já tem. O app propõe um cliente para cada subpasta e um projeto para cada
-        pasta de dentro, você confere, e ele organiza — copiando, e deixando os originais onde estão.
-      </p>
-      <div class="adocao__antes-depois">
-        <div class="adocao__lado">
-          <p class="adocao__rotulo">A pasta de hoje</p>
-          <ul class="mono-lista">
-            <li>CLIENTES\JOSÉ E MARIA\cozinha nova\fotos celular\IMG_0412.jpg</li>
-            <li>CLIENTES\JOSÉ E MARIA\cozinha nova\orçamento FINAL certo.pdf</li>
-            <li>CLIENTES\CLÍNICA VITA\recepção\medidas.jpg</li>
-            <li>CLIENTES\CLÍNICA VITA\recepção\WhatsApp Image 2025-03-02.jpeg</li>
-          </ul>
-        </div>
-        <div class="adocao__lado adocao__lado--depois">
-          <p class="adocao__rotulo">Na pasta do Organizza</p>
-          <ul class="mono-lista mono-lista--depois">
-            <li>M-0032_jose-e-maria\01_cozinha-nova\06_fotos\<b>FT_2026-09-26.jpg</b></li>
-            <li>M-0032_jose-e-maria\01_cozinha-nova\03_orcamento\<b>OR_orcamento-final-certo_2026-09-26.pdf</b></li>
-            <li>M-0031_clinica-vita\01_recepcao\01_medidas\<b>MD_medidas_2026-09-26.jpg</b></li>
-            <li>M-0031_clinica-vita\01_recepcao\06_fotos\<b>FT_2026-09-26.jpeg</b></li>
-          </ul>
-        </div>
+      <div class="faixa">
+        <h2 id="adocao-titulo">Os anos de trabalho vêm junto.</h2>
+        <p class="faixa__texto">
+          Aponte a pasta de clientes que você já tem. O app propõe um cliente para cada pasta e um projeto
+          para cada pasta de dentro. Você confere, e ele organiza copiando: os originais ficam onde estão.
+        </p>
+      </div>
+
+      <div class="lado-a-lado" data-pares>
+        <figure class="explorador">
+          <figcaption class="explorador__legenda">A pasta de hoje</figcaption>
+          <div class="explorador__janela">
+            <div class="explorador__barra">
+              <svg class="explorador__pasta" aria-hidden="true"><use href="#i-pasta" /></svg>
+              <span>Documentos</span><svg class="explorador__sep" aria-hidden="true"><use href="#i-seta" /></svg><b>CLIENTES</b>
+            </div>
+            <ul class="explorador__itens">
+              <li class="e-pasta" data-par="g"><svg aria-hidden="true"><use href="#i-pasta" /></svg><span>ANA PRADO casamento</span></li>
+              <li class="e-pasta" data-par="f"><svg aria-hidden="true"><use href="#i-pasta" /></svg><span>clinica vita - campanha</span></li>
+              <li class="e-pasta"><svg aria-hidden="true"><use href="#i-pasta" /></svg><span>Nova pasta (3)</span></li>
+              <li class="e-pasta" data-par="e"><svg aria-hidden="true"><use href="#i-pasta" /></svg><span>studio vera</span></li>
+              <li class="e-pasta" data-par="e"><svg aria-hidden="true"><use href="#i-pasta" /></svg><span>Studio Vera (2)</span></li>
+              <li class="e-doc" data-par="b"><svg aria-hidden="true"><use href="#i-nota" /></svg><span>contrato (1).pdf</span></li>
+              <li class="e-doc"><svg aria-hidden="true"><use href="#i-nota" /></svg><span>Documento sem título.docx</span></li>
+              <li class="e-img" data-par="d"><svg aria-hidden="true"><use href="#i-foto" /></svg><span>IMG-20250312-WA0044.jpg</span></li>
+              <li class="e-doc"><svg aria-hidden="true"><use href="#i-nota" /></svg><span>orçamento FINAL certo (2).pdf</span></li>
+              <li class="e-doc" data-par="a"><svg aria-hidden="true"><use href="#i-nota" /></svg><span>orçamento FINAL certo (3).pdf</span></li>
+              <li class="e-som" data-par="c"><svg aria-hidden="true"><use href="#i-audio" /></svg><span>PTT-20250318-WA0007.opus</span></li>
+            </ul>
+          </div>
+        </figure>
+
+        <span class="lado-a-lado__seta" aria-hidden="true"><svg><use href="#i-seta" /></svg></span>
+
+        <figure class="explorador explorador--depois">
+          <figcaption class="explorador__legenda">Na pasta do Organizza</figcaption>
+          <div class="explorador__janela">
+            <div class="explorador__barra">
+              <svg class="explorador__pasta" aria-hidden="true"><use href="#i-pasta" /></svg>
+              <span>Organizza</span><svg class="explorador__sep" aria-hidden="true"><use href="#i-seta" /></svg><b>trabalho</b>
+            </div>
+            <ul class="explorador__itens explorador__itens--arvore">
+              <li class="e-pasta n0" data-par="e"><svg aria-hidden="true"><use href="#i-pasta" /></svg><span>T-0007_studio-vera</span></li>
+              <li class="e-pasta n1"><svg aria-hidden="true"><use href="#i-pasta" /></svg><span>01_loja-nova</span></li>
+              <li class="e-doc n2" data-par="a"><svg aria-hidden="true"><use href="#i-nota" /></svg><span><i>01_orcamento\</i>OR_final_2026-09-26.pdf</span></li>
+              <li class="e-doc n2" data-par="b"><svg aria-hidden="true"><use href="#i-nota" /></svg><span><i>02_contrato\</i>CT_assinado_2026-09-26.pdf</span></li>
+              <li class="e-pasta n0" data-par="f"><svg aria-hidden="true"><use href="#i-pasta" /></svg><span>T-0012_clinica-vita</span></li>
+              <li class="e-pasta n1"><svg aria-hidden="true"><use href="#i-pasta" /></svg><span>01_campanha-de-outubro</span></li>
+              <li class="e-som n2" data-par="c"><svg aria-hidden="true"><use href="#i-audio" /></svg><span><i>06_audios\</i>AU_recado-do-cliente_2026-09-26.opus</span></li>
+              <li class="e-pasta n0" data-par="g"><svg aria-hidden="true"><use href="#i-pasta" /></svg><span>T-0015_ana-prado</span></li>
+              <li class="e-pasta n1"><svg aria-hidden="true"><use href="#i-pasta" /></svg><span>01_casamento</span></li>
+              <li class="e-img n2" data-par="d"><svg aria-hidden="true"><use href="#i-foto" /></svg><span><i>04_fotos\</i>FT_2026-09-26.jpg</span></li>
+            </ul>
+          </div>
+        </figure>
       </div>
       <p class="exemplo">Pastas e nomes de exemplo. Os nomes novos saem da regra do próprio app.</p>
     </section>
 
-    <!-- 7. Os planos. -->
+    <!-- 3. O app por dentro: a mesma janela, três telas. -->
+    <section class="dentro" id="dentro" aria-labelledby="dentro-titulo">
+      <div class="faixa faixa--centro">
+        <h2 id="dentro-titulo">Do que chega ao que é para hoje.</h2>
+        <div class="abas" role="tablist" aria-label="Telas do app" data-abas>
+          <button type="button" role="tab" id="aba-entrada" aria-controls="legenda-entrada" aria-selected="true" data-aba="entrada">Entrada</button>
+          <button type="button" role="tab" id="aba-projetos" aria-controls="legenda-projetos" aria-selected="false" tabindex="-1" data-aba="projetos">Projetos</button>
+          <button type="button" role="tab" id="aba-hoje" aria-controls="legenda-hoje" aria-selected="false" tabindex="-1" data-aba="hoje">Hoje</button>
+        </div>
+      </div>
+
+      <div class="vitrine" data-vitrine>
+        <div class="vitrine__moldura" data-moldura>
+          <div class="app" data-app data-tela-ativa="entrada" aria-hidden="true">
+            <aside class="app__lateral">
+              <div class="app__marca">
+                <svg viewBox="0 0 64 64"><use href="#marca-app" /></svg>
+                <span>Organizza</span>
+                <svg class="app__recolher"><use href="#i-recolher" /></svg>
+              </div>
+              <ul class="app__nav">
+                <li data-nav="hoje"><svg><use href="#i-hoje" /></svg>Hoje</li>
+                <li data-nav="entrada"><svg><use href="#i-entrada" /></svg>Entrada<b class="app__selo">6</b></li>
+                <li data-nav="projetos"><svg><use href="#i-projetos" /></svg>Projetos</li>
+                <li><svg><use href="#i-clientes" /></svg>Clientes</li>
+              </ul>
+              <p class="app__grupo">ACERVO</p>
+              <ul class="app__nav">
+                <li><svg><use href="#i-arquivos" /></svg>Arquivos</li>
+                <li><svg><use href="#i-nota" /></svg>Notas</li>
+                <li><svg><use href="#i-tarefa" /></svg>Tarefas</li>
+                <li><svg><use href="#i-diagrama" /></svg>Diagramas</li>
+              </ul>
+              <ul class="app__nav app__nav--pe">
+                <li><svg><use href="#i-visao" /></svg>Visão geral</li>
+                <li><svg><use href="#i-ajustes" /></svg>Configurações</li>
+              </ul>
+              <div class="app__espaco">
+                <svg><use href="#i-pasta" /></svg>
+                <span><b>Trabalho</b><i>…Organizza\trabalho</i></span>
+              </div>
+            </aside>
+
+            <div class="app__corpo">
+              <div class="app__topo">
+                <span class="app__chip"><b>T</b>Trabalho</span>
+                <span class="app__mais"><svg><use href="#i-mais" /></svg></span>
+                <span class="app__busca"><svg><use href="#i-busca" /></svg>Buscar em todo o espaço…<kbd>Ctrl K</kbd></span>
+                <span class="app__botao"><svg><use href="#i-enviar" /></svg>Enviar arquivos</span>
+                <svg class="app__icone"><use href="#i-sino" /></svg>
+                <span class="app__avatar"><svg><use href="#i-pessoa" /></svg></span>
+              </div>
+
+              <div class="app__telas">
+                <!-- Entrada -->
+                <section class="tela" data-tela="entrada">
+                  <div class="tela__cabeca">
+                    <div>
+                      <h3>Entrada</h3>
+                      <p>O que chegou e ainda não foi guardado. Nada vai para o projeto sem você confirmar.</p>
+                    </div>
+                  </div>
+                  <div class="entrada-app">
+                    <div class="lote">
+                      <div class="lote__cabeca">
+                        <div>
+                          <b>Chegaram 6 arquivos. Entendi assim:</b>
+                          <span>4 prontos · 2 sem projeto</span>
+                        </div>
+                        <span class="pilula pilula--acao"><svg><use href="#i-check" /></svg>Guardar o pronto</span>
+                      </div>
+                      <div class="grupo grupo--pronto">
+                        <span class="grupo__sinal"><svg><use href="#i-check" /></svg></span>
+                        <span class="grupo__minis"><i class="mini mini--papel"></i><i class="mini mini--papel"></i><i class="mini mini--tela"></i></span>
+                        <span class="grupo__texto"><b>3 · Studio Vera · Loja nova</b><span>orçamento, contrato e comprovante · prontos para guardar</span></span>
+                        <span class="pilula">Ver os 3</span>
+                      </div>
+                      <div class="grupo grupo--pronto">
+                        <span class="grupo__sinal"><svg><use href="#i-check" /></svg></span>
+                        <span class="grupo__minis"><i class="mini mini--som"></i></span>
+                        <span class="grupo__texto"><b>Áudio · Clínica Vita · Campanha de outubro</b><span>recado do cliente · pronto para guardar</span></span>
+                        <span class="pilula">Ver</span>
+                      </div>
+                      <div class="grupo grupo--falta">
+                        <span class="grupo__sinal"><svg><use href="#i-duvida" /></svg></span>
+                        <span class="grupo__minis"><i class="mini mini--foto"></i><i class="mini mini--video"></i></span>
+                        <span class="grupo__texto"><b>2 · Fotos e vídeos</b><span>o tipo está certo; falta dizer de qual projeto</span></span>
+                        <span class="pilula">Escolher o projeto</span>
+                      </div>
+                      <div class="selecao">
+                        <span class="selecao__marca"><svg><use href="#i-check" /></svg></span>
+                        <b>2 de 6 selecionados</b>
+                        <span class="selecao__para">Mandar os 2 para</span>
+                        <span class="pilula pilula--ativa">Casamento · Ana Prado <kbd>Alt 1</kbd></span>
+                        <span class="pilula"><svg><use href="#i-mais" /></svg>projeto</span>
+                      </div>
+                    </div>
+                    <aside class="inspetor">
+                      <div class="inspetor__previa">
+                        <div class="papel-previa">
+                          <b>ORÇAMENTO</b>
+                          <span>Studio Vera · Loja nova</span>
+                          <i></i><i></i><i></i><i class="curta"></i>
+                          <div class="papel-previa__tabela"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+                          <em>Total R$ 18.400,00</em>
+                        </div>
+                      </div>
+                      <p class="inspetor__nome">orçamento FINAL certo (2).pdf</p>
+                      <div class="inspetor__linha"><b>3 arquivos</b><span class="selo selo--ok">prontos</span></div>
+                      <p class="inspetor__rotulo">Projeto</p>
+                      <div class="campo-app">Loja nova · Studio Vera</div>
+                      <p class="inspetor__rotulo">O que é</p>
+                      <div class="tipos">
+                        <span class="tipo tipo--ativo" style="--tipo: var(--t-orcamento)"><svg><use href="#i-orcamento" /></svg>Orçamento<kbd>1</kbd></span>
+                        <span class="tipo" style="--tipo: var(--t-contrato)"><svg><use href="#i-contrato" /></svg>Contrato<kbd>2</kbd></span>
+                        <span class="tipo" style="--tipo: var(--t-pagamento)"><svg><use href="#i-pagamento" /></svg>Pagamentos<kbd>3</kbd></span>
+                        <span class="tipo" style="--tipo: var(--t-foto)"><svg><use href="#i-foto" /></svg>Fotos<kbd>4</kbd></span>
+                        <span class="tipo" style="--tipo: var(--t-video)"><svg><use href="#i-video" /></svg>Vídeos<kbd>5</kbd></span>
+                        <span class="tipo" style="--tipo: var(--t-audio)"><svg><use href="#i-audio" /></svg>Áudios<kbd>6</kbd></span>
+                      </div>
+                    </aside>
+                  </div>
+                </section>
+
+                <!-- Projetos -->
+                <section class="tela" data-tela="projetos">
+                  <div class="tela__cabeca">
+                    <div>
+                      <h3>Projetos</h3>
+                      <p>6 projetos em andamento</p>
+                    </div>
+                    <div class="tela__acoes">
+                      <span class="vistas"><span class="vistas__ativa"><svg><use href="#i-quadro" /></svg>Quadro</span><span><svg><use href="#i-lista" /></svg>Lista</span><span><svg><use href="#i-tabela" /></svg>Tabela</span><span><svg><use href="#i-agenda" /></svg>Calendário</span></span>
+                      <span class="pilula pilula--acao"><svg><use href="#i-mais" /></svg>Novo projeto</span>
+                    </div>
+                  </div>
+                  <div class="filtros">
+                    <span class="filtros__busca"><svg><use href="#i-busca" /></svg>Filtrar por cliente, projeto, código…<kbd>/</kbd></span>
+                    <span class="pilula">Só pendências</span>
+                    <span class="pilula"><svg><use href="#i-bandeira" /></svg>Prioridade</span>
+                    <span class="pilula"><svg><use href="#i-quadro" /></svg>Etapa</span>
+                    <span class="pilula"><svg><use href="#i-olho" /></svg>Exibir</span>
+                  </div>
+                  <div class="colunas">
+                    <div class="coluna" style="--etapa: var(--e1)">
+                      <div class="coluna__cabeca"><i></i><b>Contato</b><span>2</span><svg><use href="#i-pontos" /></svg></div>
+                      <div class="cartao">
+                        <div class="cartao__topo"><b>Catálogo 2027</b><span>R$ 6.800</span></div>
+                        <p class="cartao__quem"><i class="av av--1">CA</i>Café Aurora</p>
+                        <div class="cartao__pe"><span><svg><use href="#i-relogio" /></svg>2 d</span></div>
+                      </div>
+                      <div class="cartao">
+                        <div class="cartao__topo"><b>Ensaio da equipe</b><span>R$ 3.200</span></div>
+                        <p class="cartao__quem"><i class="av av--2">CV</i>Clínica Vita</p>
+                        <p class="cartao__proxima"><svg><use href="#i-seta" /></svg>Mandar a proposta</p>
+                        <div class="cartao__pe"><span><svg><use href="#i-relogio" /></svg>0 d</span></div>
+                      </div>
+                    </div>
+                    <div class="coluna" style="--etapa: var(--e2)">
+                      <div class="coluna__cabeca"><i></i><b>Proposta</b><span>1</span><svg><use href="#i-pontos" /></svg></div>
+                      <div class="cartao">
+                        <div class="cartao__topo"><b>Casamento</b><span>R$ 14.500</span></div>
+                        <p class="cartao__quem"><i class="av av--3">AP</i>Ana Prado</p>
+                        <p class="cartao__proxima"><svg><use href="#i-seta" /></svg>Proposta enviada ao cliente</p>
+                        <div class="cartao__pe"><span><svg><use href="#i-tarefa" /></svg>1</span><span><svg><use href="#i-clipe" /></svg>4</span><span><svg><use href="#i-relogio" /></svg>3 d</span></div>
+                      </div>
+                    </div>
+                    <div class="coluna" style="--etapa: var(--e3)">
+                      <div class="coluna__cabeca"><i></i><b>Em andamento</b><span>2</span><svg><use href="#i-pontos" /></svg></div>
+                      <div class="cartao">
+                        <div class="cartao__topo"><b>Loja nova</b><span>R$ 18.400</span></div>
+                        <p class="cartao__quem"><i class="av av--4">SV</i>Studio Vera</p>
+                        <p class="cartao__proxima"><svg><use href="#i-seta" /></svg>Sinal recebido</p>
+                        <div class="cartao__pe"><span><svg><use href="#i-tarefa" /></svg>2</span><span><svg><use href="#i-clipe" /></svg>9</span><span><svg><use href="#i-relogio" /></svg>1 d</span></div>
+                      </div>
+                      <div class="cartao">
+                        <div class="cartao__topo"><b>Campanha de outubro</b><span>R$ 9.600</span></div>
+                        <p class="cartao__quem"><i class="av av--2">CV</i>Clínica Vita</p>
+                        <p class="cartao__proxima"><svg><use href="#i-seta" /></svg>Aprovar as peças</p>
+                        <div class="cartao__pe"><span><svg><use href="#i-clipe" /></svg>6</span><span><svg><use href="#i-relogio" /></svg>4 d</span></div>
+                      </div>
+                    </div>
+                    <div class="coluna" style="--etapa: var(--e4)">
+                      <div class="coluna__cabeca"><i></i><b>Revisão</b><span>1</span><svg><use href="#i-pontos" /></svg></div>
+                      <div class="cartao">
+                        <div class="cartao__topo"><b>Relatório anual</b><span>R$ 7.200</span></div>
+                        <p class="cartao__quem"><i class="av av--5">IL</i>Instituto Lumiar</p>
+                        <p class="cartao__proxima"><svg><use href="#i-seta" /></svg>Versão 2 enviada</p>
+                        <div class="cartao__pe"><span><svg><use href="#i-clipe" /></svg>3</span><span><svg><use href="#i-relogio" /></svg>6 d</span></div>
+                      </div>
+                    </div>
+                    <div class="coluna" style="--etapa: var(--e5)">
+                      <div class="coluna__cabeca"><i></i><b>Entregue</b><span>2</span><svg><use href="#i-pontos" /></svg></div>
+                      <div class="cartao">
+                        <div class="cartao__topo"><b>Cardápio novo</b><span>R$ 2.900</span></div>
+                        <p class="cartao__quem"><i class="av av--1">CA</i>Café Aurora</p>
+                        <div class="cartao__pe"><span><svg><use href="#i-clipe" /></svg>5</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <!-- Hoje -->
+                <section class="tela" data-tela="hoje">
+                  <div class="tela__cabeca">
+                    <div>
+                      <h3>Hoje</h3>
+                      <p>sexta-feira, 2 de outubro</p>
+                    </div>
+                    <div class="tela__acoes">
+                      <span class="pilula"><svg><use href="#i-lua" /></svg>Fechar o dia</span>
+                      <span class="pilula pilula--acao"><svg><use href="#i-mais" /></svg>Novo projeto</span>
+                    </div>
+                  </div>
+                  <div class="hoje-app">
+                    <div class="hoje-app__principal">
+                      <p class="hoje-app__frase">2 projetos pedem você hoje</p>
+                      <div class="anotar"><svg><use href="#i-lapis" /></svg>Anotar… ex.: “ligar para a Ana amanhã”<kbd>N</kbd></div>
+                      <p class="bloco-titulo"><svg><use href="#i-alvo" /></svg><b>Agora</b><span>2 em foco, de 5</span></p>
+                      <div class="foco">
+                        <div class="foco__item">
+                          <span class="foco__n">1</span>
+                          <span class="foco__texto"><b>Loja nova <span>· Studio Vera</span></b><span><svg><use href="#i-seta" /></svg>Falta o comprovante do saldo</span></span>
+                          <span class="pilula pilula--clara"><svg><use href="#i-conversa" /></svg>Pedir ao cliente</span>
+                        </div>
+                        <div class="foco__item">
+                          <span class="foco__n">2</span>
+                          <span class="foco__texto"><b>Casamento <span>· Ana Prado</span></b><span><svg><use href="#i-seta" /></svg>Versão nova do roteiro ainda não foi para o cliente</span></span>
+                          <span class="pilula pilula--clara">Marcar como enviada</span>
+                        </div>
+                      </div>
+                      <p class="bloco-titulo"><svg><use href="#i-carteira" /></svg><b>Carteira</b><span>arraste para reordenar</span></p>
+                      <div class="etapas-chips">
+                        <span style="--etapa: var(--e1)">Contato <b>2</b></span>
+                        <span style="--etapa: var(--e2)">Proposta <b>1</b></span>
+                        <span style="--etapa: var(--e3)">Em andamento <b>2</b></span>
+                        <span style="--etapa: var(--e4)">Revisão <b>1</b></span>
+                        <span style="--etapa: var(--e5)">Entregue <b>2</b></span>
+                      </div>
+                      <div class="fila">
+                        <div class="fila__item"><svg class="fila__pega"><use href="#i-pegar" /></svg><span class="fila__n">3</span><span class="fila__texto"><b>Campanha de outubro <span>· Clínica Vita</span></b><span>Aprovar as peças</span></span><span class="selo">1 de 2 para avançar</span><svg class="fila__icone"><use href="#i-ampulheta" /></svg><svg class="fila__icone"><use href="#i-subir" /></svg></div>
+                        <div class="fila__item"><svg class="fila__pega"><use href="#i-pegar" /></svg><span class="fila__n">4</span><span class="fila__texto"><b>Relatório anual <span>· Instituto Lumiar</span></b><span>Versão 2 enviada</span></span><span class="selo">0 de 1 para avançar</span><svg class="fila__icone"><use href="#i-ampulheta" /></svg><svg class="fila__icone"><use href="#i-subir" /></svg></div>
+                        <div class="fila__item"><svg class="fila__pega"><use href="#i-pegar" /></svg><span class="fila__n">5</span><span class="fila__texto"><b>Ensaio da equipe <span>· Clínica Vita</span></b><span>Mandar a proposta</span></span><span class="selo">0 de 1 para avançar</span><svg class="fila__icone"><use href="#i-ampulheta" /></svg><svg class="fila__icone"><use href="#i-subir" /></svg></div>
+                      </div>
+                    </div>
+                    <aside class="hoje-app__lado">
+                      <p class="bloco-titulo"><svg><use href="#i-agenda" /></svg><b>O dia</b></p>
+                      <ol class="dia">
+                        <li><time>10:00</time><span><b>Reunião</b>Ana Prado · Casamento</span></li>
+                        <li class="dia__agora"><time>13:40</time><span><b>Agora</b></span></li>
+                        <li><time>14:30</time><span><b>Entregar a proposta</b>Café Aurora · Catálogo 2027</span></li>
+                        <li><time>16:00</time><span><b>Ligar</b>Clínica Vita · Campanha de outubro</span></li>
+                      </ol>
+                      <p class="bloco-titulo"><svg><use href="#i-entrada" /></svg><b>Chegou hoje</b><span>4 guardados</span></p>
+                      <ul class="chegou">
+                        <li style="--tipo: var(--t-orcamento)"><i></i><span><b>OR_final_2026-10-02.pdf</b>Studio Vera · Loja nova</span></li>
+                        <li style="--tipo: var(--t-audio)"><i></i><span><b>AU_recado-do-cliente_2026-10-02.opus</b>Clínica Vita</span></li>
+                        <li style="--tipo: var(--t-foto)"><i></i><span><b>FT_referencia_2026-10-02.jpg</b>Ana Prado · Casamento</span></li>
+                      </ul>
+                    </aside>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="legendas">
+        <div class="legenda" id="legenda-entrada" role="tabpanel" aria-labelledby="aba-entrada" data-legenda="entrada">
+          <p class="legenda__titulo">O que chega espera na Entrada, já lido.</p>
+          <p>O app junta o lote, diz o que acha de cada arquivo e de qual projeto ele é. Você confirma com um clique, corrige o que errou, e só então ele guarda.</p>
+        </div>
+        <div class="legenda" id="legenda-projetos" role="tabpanel" aria-labelledby="aba-projetos" data-legenda="projetos" hidden>
+          <p class="legenda__titulo">Todos os projetos, e em que pé está cada um.</p>
+          <p>Um quadro com as etapas que você usa. Cada cartão diz a próxima ação e o que falta para andar, sem abrir pasta nenhuma.</p>
+        </div>
+        <div class="legenda" id="legenda-hoje" role="tabpanel" aria-labelledby="aba-hoje" data-legenda="hoje" hidden>
+          <p class="legenda__titulo">O dia começa sabendo o que fazer.</p>
+          <p>Os projetos em foco, a próxima ação de cada um, o que o cliente ainda não mandou e o que chegou. Com a mensagem do WhatsApp pronta para pedir.</p>
+        </div>
+      </div>
+      <p class="exemplo">As telas do app, desenhadas com clientes fictícios.</p>
+    </section>
+
+    <!-- 4. A pasta é sua: o caminho de um arquivo, lido parte por parte. -->
+    <section class="sua" aria-labelledby="sua-titulo">
+      <div class="sua__dentro">
+        <h2 id="sua-titulo">Seus arquivos continuam seus.</h2>
+        <p class="faixa__texto">Tudo fica numa pasta no seu disco, com um nome que qualquer pessoa entende. Abre no Explorador, como qualquer outra.</p>
+
+        <figure class="anatomia">
+          <ol class="anatomia__arvore">
+            <li style="--nivel: 0"><code>D:\Organizza\trabalho\</code><small>a sua pasta</small></li>
+            <li style="--nivel: 1"><code>T-0007_studio-vera\</code><small>o cliente</small></li>
+            <li style="--nivel: 2"><code>01_loja-nova\</code><small>o projeto</small></li>
+            <li style="--nivel: 3"><code>02_contrato\</code><small>o tipo</small></li>
+            <li style="--nivel: 4" class="anatomia__nome"><code>CT_assinado_2026-09-26.pdf</code><small>o que é, e de quando</small></li>
+          </ol>
+          <figcaption class="so-leitor">O caminho de um arquivo guardado: a sua pasta, o cliente, o projeto, o tipo e o nome que diz o que é e de quando.</figcaption>
+        </figure>
+
+        <dl class="garantias">
+          <div><dt>Uma pasta no seu disco</dt><dd>Uma por cliente, uma por projeto, uma por tipo. Nada fica preso dentro do app.</dd></div>
+          <div><dt>Funciona sem internet</dt><dd>No computador, tudo funciona desconectado. A sincronização espera a internet voltar.</dd></div>
+          <div><dt>Legível se você sair</dt><dd>Os nomes dizem o que cada arquivo é. Se um dia você deixar o app, a pasta continua organizada.</dd></div>
+          <div><dt>Sem servidor com seus arquivos</dt><dd>Os computadores conversam pela sua conta do Google Drive. Seus clientes e arquivos não passam por nós.</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- A prova (spec 0147, C): o primeiro usuário, sem o nome dele, com os
+         números do acervo dele, confirmados por ele em 09/10/2026. Antes do
+         preço: quem vai ver quanto custa já sabe que alguém usa. -->
+    <section class="prova" aria-labelledby="prova-titulo">
+      <div class="faixa prova__dentro">
+        <div class="prova__texto">
+          <p class="prova__rotulo">Quem usa primeiro</p>
+          <h2 id="prova-titulo">Um marceneiro de Sorocaba.</h2>
+          <p class="faixa__texto">Recebia medidas, projetos e fotos pelo WhatsApp e guardava tudo à mão, uma pasta por cliente. Agora, o que chega vai para a pasta certa, com o nome certo.</p>
+        </div>
+        <dl class="prova__numeros">
+          <div><dt>arquivos guardados</dt><dd>110</dd></div>
+          <div><dt>clientes, cada um na sua pasta</dt><dd>10</dd></div>
+          <div><dt>semanas de uso</dt><dd>3</dd></div>
+        </dl>
+        <p class="prova__fonte">O primeiro usuário do Organizza. Números do acervo dele em 9 de outubro de 2026.</p>
+      </div>
+    </section>
+
+    <!-- 5. Planos e dúvidas. -->
     <section class="planos" id="planos" aria-labelledby="planos-titulo">
-      <h2 id="planos-titulo">Comece grátis. Passe para o Pro quando trabalhar em mais de um lugar.</h2>
+      <div class="faixa faixa--centro">
+        <h2 id="planos-titulo">Comece grátis.</h2>
+        <p class="faixa__texto">Passe para o Pro quando trabalhar em mais de um lugar.</p>
+      </div>
       <div class="planos__grade">
         <article class="plano">
           <h3>Grátis</h3>
           <p class="plano__preco"><b>R$ 0</b></p>
           <p class="plano__para">Para organizar tudo num computador.</p>
           <ul class="plano__lista">
-            <li>A Entrada que organiza o que chega</li>
-            <li>Clientes, projetos e as etapas do seu ofício</li>
-            <li>O Hoje e a semana</li>
-            <li>Notas, tarefas e diagramas</li>
-            <li>A pasta que você já tem, trazida de uma vez</li>
-            <li>Cópia de segurança diária no computador</li>
+            <li><svg aria-hidden="true"><use href="#i-check" /></svg>A Entrada que organiza o que chega</li>
+            <li><svg aria-hidden="true"><use href="#i-check" /></svg>Clientes, projetos e as etapas do seu trabalho</li>
+            <li><svg aria-hidden="true"><use href="#i-check" /></svg>O Hoje e a semana</li>
+            <li><svg aria-hidden="true"><use href="#i-check" /></svg>Notas, tarefas e diagramas</li>
+            <li><svg aria-hidden="true"><use href="#i-check" /></svg>A pasta que você já tem, trazida de uma vez</li>
+            <li><svg aria-hidden="true"><use href="#i-check" /></svg>Cópia de segurança diária no computador</li>
           </ul>
-          <a class="botao botao--grande plano__botao" href="https://docs.google.com/forms/d/e/1FAIpQLSepyDrJO37RKZ0zxdpPHEn-aTGBo5G7R-Lo_7ZwaOTp64ZHNw/viewform" target="_blank" rel="noopener" data-convite-link>Pedir convite</a>
+          <a class="botao botao--contorno plano__botao" href="https://docs.google.com/forms/d/e/1FAIpQLSepyDrJO37RKZ0zxdpPHEn-aTGBo5G7R-Lo_7ZwaOTp64ZHNw/viewform" target="_blank" rel="noopener" data-convite>Pedir convite</a>
         </article>
 
         <article class="plano plano--pro">
           <h3>Pro</h3>
           <p class="plano__preco"><b>R$ 39</b><span>por mês</span></p>
-          <p class="plano__anual">ou R$ 390 por ano — dois meses de presente</p>
-          <p class="plano__para">Para quem trabalha no escritório, em casa e na obra.</p>
+          <p class="plano__anual">ou R$ 390 por ano: dois meses de presente</p>
+          <p class="plano__para">Para quem trabalha no escritório, em casa e na rua.</p>
           <ul class="plano__lista">
-            <li>Tudo do Grátis</li>
-            <li>O mesmo acervo em vários computadores</li>
-            <li>Consultar o acervo pelo navegador, de qualquer lugar</li>
-            <li>Cópia de segurança diária no seu Drive</li>
-            <li><span>A foto do celular direto na Entrada <em>em breve</em></span></li>
+            <li><svg aria-hidden="true"><use href="#i-check" /></svg>Tudo do Grátis</li>
+            <li><svg aria-hidden="true"><use href="#i-check" /></svg>O mesmo acervo em vários computadores</li>
+            <li><svg aria-hidden="true"><use href="#i-check" /></svg>Consultar o acervo pelo navegador, de qualquer lugar</li>
+            <li><svg aria-hidden="true"><use href="#i-check" /></svg>Cópia de segurança diária no seu Drive</li>
+            <li class="plano__breve"><svg aria-hidden="true"><use href="#i-check" /></svg><span>A foto do celular direto na Entrada <em>em breve</em></span></li>
           </ul>
-          <a class="botao botao--forte botao--grande plano__botao" href="https://docs.google.com/forms/d/e/1FAIpQLSepyDrJO37RKZ0zxdpPHEn-aTGBo5G7R-Lo_7ZwaOTp64ZHNw/viewform" target="_blank" rel="noopener" data-convite-link>Pedir convite</a>
+          <a class="botao botao--claro plano__botao" href="https://docs.google.com/forms/d/e/1FAIpQLSepyDrJO37RKZ0zxdpPHEn-aTGBo5G7R-Lo_7ZwaOTp64ZHNw/viewform" target="_blank" rel="noopener" data-convite>Pedir convite</a>
         </article>
       </div>
       <p class="planos__nota">Estamos abrindo aos poucos: o pagamento do Pro abre junto com os convites.</p>
-    </section>
 
-    <!-- 8. As dúvidas de quem está decidindo. -->
-    <section class="duvidas" id="duvidas" aria-labelledby="duvidas-titulo">
-      <h2 id="duvidas-titulo">Dúvidas</h2>
-      <div class="duvidas__lista">
-        <details>
-          <summary>Preciso mudar meu jeito de trabalhar?</summary>
-          <p>Não. Você continua recebendo pelo WhatsApp e mandando pelo WhatsApp. O que muda é que o arquivo não fica perdido na conversa: ele vai para a pasta do cliente certo, com um nome que diz o que é.</p>
-        </details>
-        <details>
-          <summary>E se eu parar de usar o app?</summary>
-          <p>A pasta continua no seu disco, organizada, com nomes legíveis. Nada fica preso dentro do Organizza.</p>
-        </details>
-        <details>
-          <summary>Funciona sem internet?</summary>
-          <p>No computador, sim, tudo. No Pro, o que você fizer sem internet sobe para os outros computadores quando ela voltar.</p>
-        </details>
-        <details>
-          <summary>Funciona no Mac ou no celular?</summary>
-          <p>O app é para Windows. No Pro, dá para consultar o acervo pelo navegador, em qualquer computador. O celular está sendo feito.</p>
-        </details>
-        <details>
-          <summary>Meus clientes veem alguma coisa?</summary>
-          <p>Não. O app é seu. Quando é hora de pedir um documento ao cliente, ele prepara a mensagem e você manda pelo seu WhatsApp.</p>
-        </details>
-        <details>
-          <summary>Onde ficam meus dados?</summary>
-          <p>No seu computador e, no Pro, na sua conta do Google Drive. O Organizza não tem um servidor com os seus clientes e arquivos.</p>
-        </details>
+      <div class="duvidas" id="duvidas">
+        <h2 class="duvidas__titulo">Dúvidas</h2>
+        <div class="duvidas__lista">
+          <details>
+            <summary>Preciso mudar meu jeito de trabalhar?<svg aria-hidden="true"><use href="#i-mais" /></svg></summary>
+            <p>Não. Você continua recebendo e mandando pelo WhatsApp. O que muda é que o arquivo não fica perdido na conversa: ele vai para a pasta do cliente certo, com um nome que diz o que é.</p>
+          </details>
+          <details>
+            <summary>E se eu parar de usar o app?<svg aria-hidden="true"><use href="#i-mais" /></svg></summary>
+            <p>A pasta continua no seu disco, organizada, com nomes legíveis. Nada fica preso dentro do Organizza.</p>
+          </details>
+          <details>
+            <summary>Funciona sem internet?<svg aria-hidden="true"><use href="#i-mais" /></svg></summary>
+            <p>No computador, sim, tudo. No Pro, o que você fizer sem internet sobe para os outros computadores quando ela voltar.</p>
+          </details>
+          <details>
+            <summary>Funciona no Mac ou no celular?<svg aria-hidden="true"><use href="#i-mais" /></svg></summary>
+            <p>O app é para Windows. No Pro, dá para consultar o acervo pelo navegador, em qualquer computador. O celular está sendo feito.</p>
+          </details>
+          <details>
+            <summary>Serve para o meu tipo de trabalho?<svg aria-hidden="true"><use href="#i-mais" /></svg></summary>
+            <p>Se você trabalha por cliente e por projeto, serve. Cada espaço tem as etapas, os tipos de arquivo e os nomes que você usa, e dá para ter mais de um: o trabalho, a faculdade, a casa.</p>
+          </details>
+          <details>
+            <summary>Onde ficam meus dados?<svg aria-hidden="true"><use href="#i-mais" /></svg></summary>
+            <p>No seu computador e, no Pro, na sua conta do Google Drive. A conta do Organizza guarda só quem você é; seus clientes e arquivos não passam por um servidor nosso.</p>
+          </details>
+        </div>
       </div>
     </section>
 
-    <!-- 9. O fechamento. -->
-    <section class="convite campo campo--jade" id="convite" aria-labelledby="convite-titulo">
-      <h2 id="convite-titulo">Pare de procurar arquivo.</h2>
-      <p data-convite-texto>Estamos abrindo aos poucos. Peça o seu convite: você recebe quando a sua vez chegar.</p>
-      <a class="botao botao--escuro botao--grande convite__botao" href="https://docs.google.com/forms/d/e/1FAIpQLSepyDrJO37RKZ0zxdpPHEn-aTGBo5G7R-Lo_7ZwaOTp64ZHNw/viewform" target="_blank" rel="noopener" data-convite-principal>Pedir convite</a>
-      <p class="convite__nota" data-convite-nota>Grátis no computador. Pro por R$ 39 por mês.</p>
+    <!-- 6. O fechamento: a pasta que se fecha no fim da página. -->
+    <section class="convite" id="convite" aria-labelledby="convite-titulo">
+      <div class="convite__dentro">
+        <h2 id="convite-titulo">Pare de procurar arquivo.</h2>
+        <p>Estamos abrindo aos poucos. Peça o seu convite: você recebe quando a sua vez chegar.</p>
+        <a class="botao botao--tinta botao--grande" href="https://docs.google.com/forms/d/e/1FAIpQLSepyDrJO37RKZ0zxdpPHEn-aTGBo5G7R-Lo_7ZwaOTp64ZHNw/viewform" target="_blank" rel="noopener" data-convite>Pedir convite</a>
+        <p class="convite__nota">Grátis no computador. Pro por R$ 39 por mês.</p>
+      </div>
     </section>
   </main>
 
   <footer class="rodape">
     <span>Organizza · nome provisório</span>
-    <a class="link" href="/">Já tenho convite: entrar</a>
+    <a href="/">Já tenho convite: entrar</a>
   </footer>
 
-  <script src="./entrada.js" defer></script>
+  <!-- A marca, desenhada uma vez para o app da vitrine. -->
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="marca-app" viewBox="0 0 64 64">
+      <mask id="corte-app" maskUnits="userSpaceOnUse" x="0" y="0" width="64" height="64">
+        <rect width="64" height="64" fill="#fff" />
+        <path d="M8 39 41 6" stroke="#000" stroke-width="7" stroke-linecap="round" />
+      </mask>
+      <path d="M21 10h15l18 18v12L40 54H22L10 42V22Z" fill="none" stroke="currentColor" stroke-width="10" stroke-linejoin="round" mask="url(#corte-app)" />
+    </symbol>
+  </svg>
+
+  <!-- O convite em modal (spec 0147): o pedido vai para o Google Forms por trás,
+       sem a pessoa sair da página. Sem JavaScript, os botões abrem o Forms. -->
+  <dialog class="convite-modal" aria-labelledby="convite-modal-titulo" data-convite-modal>
+    <button type="button" class="convite-modal__fechar" aria-label="Fechar" data-convite-fechar>×</button>
+    <form class="convite-modal__form" novalidate data-convite-form>
+      <p class="convite-modal__sobre">Estamos abrindo aos poucos</p>
+      <h2 id="convite-modal-titulo">Peça o seu convite.</h2>
+      <p class="convite-modal__apoio">Você recebe por e-mail quando a sua vez chegar. Não cria conta nem gera cobrança.</p>
+
+      <label for="convite-modal-email">Seu e-mail</label>
+      <input id="convite-modal-email" name="email" type="email" autocomplete="email" maxlength="254" required aria-describedby="convite-modal-erro-email" />
+      <span class="convite-modal__erro" id="convite-modal-erro-email"></span>
+
+      <fieldset class="convite-modal__fichas" aria-describedby="convite-modal-erro-oque">
+        <legend>O que você faz?</legend>
+        <label><input type="radio" name="oque" value="Marcenaria e móveis planejados" /> Marcenaria e móveis planejados</label>
+        <label><input type="radio" name="oque" value="Arquitetura" /> Arquitetura</label>
+        <label><input type="radio" name="oque" value="Fotografia" /> Fotografia</label>
+        <label><input type="radio" name="oque" value="Design de interiores" /> Design de interiores</label>
+        <label><input type="radio" name="oque" value="outro" /> Outro</label>
+      </fieldset>
+      <input class="convite-modal__outro" name="outro" maxlength="80" placeholder="Conte o que você faz" aria-label="O que você faz" hidden />
+      <span class="convite-modal__erro" id="convite-modal-erro-oque"></span>
+
+      <label for="convite-modal-nome">Seu nome <small>opcional</small></label>
+      <input id="convite-modal-nome" name="nome" autocomplete="given-name" maxlength="100" />
+
+      <p class="convite-modal__erro" role="alert" data-convite-erro></p>
+      <button class="botao botao--tinta convite-modal__enviar" type="submit">Pedir meu convite</button>
+      <p class="convite-modal__privacidade">Usamos o seu e-mail só para responder ao pedido e mandar o convite.</p>
+    </form>
+    <div class="convite-modal__feito" data-convite-feito hidden>
+      <span class="convite-modal__selo" aria-hidden="true">✓</span>
+      <h2 tabindex="-1">Pedido recebido.</h2>
+      <p data-convite-confirma></p>
+      <button class="botao botao--tinta" type="button" data-convite-fechar>Continuar vendo</button>
+    </div>
+  </dialog>
+
+  <script src="./conheca.js" defer></script>
 </body>
 </html>
