@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Organizza — política de privacidade</title>
+  <meta name="description" content="O que o Organizza guarda, onde guarda e o que faz com os seus dados." />
+  <style>
+    @font-face { font-family: 'Inter'; src: url('/conheca/inter.woff2') format('woff2'); font-weight: 100 900; font-display: swap; }
+    :root { --chao: #f6f5f2; --papel: #ffffff; --tinta: #1d1d1f; --tinta-2: #55524c; --linha: #e4e1da; --acao: #0f8f86; }
+    @media (prefers-color-scheme: dark) {
+      :root { --chao: #121316; --papel: #1a1c20; --tinta: #f2f1ee; --tinta-2: #b3b0a8; --linha: #2c2f35; --acao: #3cc8bd; }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--chao); color: var(--tinta); font: 17px/1.65 'Inter', system-ui, sans-serif; }
+    main { max-width: 760px; margin: 0 auto; padding: 56px 20px 80px; }
+    .topo { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 40px; }
+    .topo a { color: var(--tinta-2); text-decoration: none; font-size: 15px; }
+    .topo a:hover { color: var(--acao); }
+    .marca { font-weight: 700; letter-spacing: -.03em; font-size: 20px; color: var(--tinta); }
+    h1 { font-size: clamp(30px, 6vw, 42px); line-height: 1.12; letter-spacing: -.03em; margin: 0 0 12px; }
+    .data { color: var(--tinta-2); margin: 0 0 32px; }
+    .resumo { background: var(--papel); border: 1px solid var(--linha); border-radius: 16px; padding: 20px 24px; margin-bottom: 40px; }
+    .resumo ul { margin: 0; padding-left: 20px; }
+    h2 { font-size: 22px; letter-spacing: -.015em; margin: 40px 0 8px; }
+    p, li { color: var(--tinta); }
+    li + li { margin-top: 6px; }
+    a { color: var(--acao); }
+    code { font-size: .9em; background: var(--papel); border: 1px solid var(--linha); border-radius: 6px; padding: 1px 6px; }
+    .preencher { background: #fff3c4; color: #5a4300; border-radius: 6px; padding: 0 6px; }
+    footer { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--linha); color: var(--tinta-2); font-size: 15px; }
+  </style>
+</head>
+<body>
+<main>
+  <div class="topo">
+    <span class="marca">Organizza</span>
+    <a href="/conheca/">Conhecer o app</a>
+  </div>
+
+  <h1>Política de privacidade</h1>
+  <p class="data">Em vigor desde 10 de outubro de 2026.</p>
+
+  <div class="resumo">
+    <ul>
+      <li>Os seus arquivos e registros ficam <b>no seu computador</b> e, se você conectar, <b>na sua própria conta de nuvem</b>. Não temos um servidor que guarde os seus arquivos.</li>
+      <li>Nós não vendemos, não alugamos e não usamos os seus dados para anúncio.</li>
+      <li>Você pode desconectar a nuvem e apagar a sua conta quando quiser.</li>
+    </ul>
+  </div>
+
+  <h2>Quem somos</h2>
+  <p>
+    O Organizza é um aplicativo para organizar arquivos, clientes, projetos e notas, para Windows e para o navegador
+    (<a href="/">app.endgame.fun</a>). Quem responde por ele e por esta política é
+    <span class="preencher">[nome de quem responde]</span>, pelo e-mail <span class="preencher">[e-mail de contato]</span>.
+  </p>
+
+  <h2>O que fica no seu computador</h2>
+  <p>
+    O app do Windows guarda os seus arquivos numa pasta que você escolhe (por exemplo, <code>D:\Organizza</code>) e os
+    registros (clientes, projetos, tarefas, notas, agenda) num banco de dados dentro dessa mesma pasta. No navegador, os
+    registros ficam no armazenamento do próprio navegador. Nada disso é enviado para servidores nossos.
+  </p>
+
+  <h2>A sua conta do Organizza</h2>
+  <p>
+    Para entrar, você usa uma conta do Organizza, criada com o Google ou com e-mail e senha. Ela é mantida pelo
+    Firebase Authentication, um serviço do Google: guardamos ali o seu e-mail, o seu nome (quando o Google o informa) e
+    as datas de criação e de último acesso. A senha, quando há, é guardada pelo Firebase, nunca por nós em texto.
+  </p>
+
+  <h2>A sua nuvem (Google Drive)</h2>
+  <p>Se você conectar o Google Drive, o Organizza usa a sua conta Google para:</p>
+  <ul>
+    <li><b>Guardar uma cópia dos seus arquivos e do registro das mudanças</b> numa pasta "Organizza" no seu próprio Drive, para os seus computadores e o celular ficarem iguais. Com a permissão básica (<code>drive.file</code>), o app só vê o que ele mesmo criou.</li>
+    <li><b>Ler uma pasta que você escolher</b>, quando você pede para trazer pastas que já existem ou para ligar um espaço a uma pasta (permissão de leitura, pedida à parte, na hora).</li>
+    <li><b>Organizar uma pasta ligada</b>: dar o nome do app aos arquivos, criar a pasta de um projeto e subir os arquivos que chegam pelo app. Só com a permissão de edição, pedida à parte, e sempre mostrando antes a lista do que vai mudar. Nada é apagado nem sobrescrito: o Drive guarda as versões anteriores.</li>
+  </ul>
+  <p>
+    Os dados do seu Drive vão direto do Google para o app no seu computador ou no seu navegador. Eles não passam por
+    servidores nossos, e não os lemos, vendemos ou compartilhamos.
+  </p>
+  <p>
+    O uso e a transferência, para qualquer outro aplicativo, das informações recebidas das APIs do Google seguem a
+    <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Política de Dados do
+    Usuário dos Serviços de API do Google</a>, incluindo os requisitos de Uso Limitado.
+  </p>
+
+  <h2>A lista de convites</h2>
+  <p>
+    Se você pede um convite pela página do app, o seu nome e o seu e-mail ficam num formulário do Google Forms, só para
+    entrarmos em contato sobre o convite.
+  </p>
+
+  <h2>O que não fazemos</h2>
+  <ul>
+    <li>Não usamos os seus dados para anúncio nem os vendemos.</li>
+    <li>Não usamos os seus arquivos para treinar modelos de inteligência artificial.</li>
+    <li>Não colocamos rastreadores de terceiros no app.</li>
+  </ul>
+
+  <h2>Os seus direitos</h2>
+  <p>
+    Pela Lei Geral de Proteção de Dados (LGPD), você pode pedir para saber quais dados seus temos, corrigi-los,
+    levá-los com você ou apagá-los. Os arquivos e registros já estão com você, no seu computador e na sua nuvem. Para
+    apagar a conta do Organizza, ou para qualquer pedido, escreva para <span class="preencher">[e-mail de contato]</span>.
+  </p>
+  <p>
+    Para tirar o acesso do Organizza ao seu Google Drive a qualquer momento: no app, em Configurações → Conexões →
+    Desconectar, ou na sua conta Google, em
+    <a href="https://myaccount.google.com/permissions" rel="noopener">myaccount.google.com/permissions</a>.
+  </p>
+
+  <h2>Mudanças nesta política</h2>
+  <p>Quando esta política mudar, a data no alto muda junto, e o que mudou de importante será avisado no app.</p>
+
+  <footer>Organizza · nome provisório · <a href="/conheca/">Conhecer o app</a></footer>
+</main>
+</body>
+</html>
