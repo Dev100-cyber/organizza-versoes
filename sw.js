@@ -14,10 +14,10 @@
  *    página em si vem sempre da rede, quando há rede, para a versão nova
  *    chegar no mesmo dia.
  *
- * O nome da cópia leva a versão: o 0.2.57 é trocado na montagem do site,
+ * O nome da cópia leva a versão: o 0.2.59 é trocado na montagem do site,
  * e a versão nova apaga as cópias da anterior.
  */
-const COPIA = 'organizza-0.2.57';
+const COPIA = 'organizza-0.2.59';
 const BANCO = 'organizza-compartilhados';
 const LOJA = 'lote';
 
