@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Os tipos de espaço · Ajuda do Organizza</title>
+  <meta name="description" content="Trabalho, Marcenaria, Arquitetura, Fotografia, Estudos, Pessoal e os outros, lado a lado." />
+  <style>
+  @font-face { font-family: 'Inter'; src: url('/conheca/inter.woff2') format('woff2'); font-weight: 100 900; font-display: swap; }
+  :root { --chao: #f6f5f2; --papel: #ffffff; --tinta: #1d1d1f; --tinta-2: #55524c; --linha: #e4e1da; --acao: #0f8f86; }
+  @media (prefers-color-scheme: dark) { :root { --chao: #121316; --papel: #1a1c20; --tinta: #f2f1ee; --tinta-2: #b3b0a8; --linha: #2c2f35; --acao: #3cc8bd; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--chao); color: var(--tinta); font: 17px/1.65 'Inter', system-ui, sans-serif; }
+  main { max-width: 780px; margin: 0 auto; padding: 48px 20px 80px; }
+  .topo { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 32px; }
+  .topo a { color: var(--tinta-2); text-decoration: none; font-size: 15px; }
+  .topo a:hover { color: var(--acao); }
+  .marca { font-weight: 700; letter-spacing: -.03em; font-size: 20px; color: var(--tinta); text-decoration: none; }
+  h1 { font-size: clamp(30px, 6vw, 40px); line-height: 1.12; letter-spacing: -.03em; margin: 0 0 16px; }
+  h2 { font-size: 22px; letter-spacing: -.015em; margin: 36px 0 8px; }
+  li + li { margin-top: 6px; }
+  a { color: var(--acao); }
+  kbd { font: 600 .85em/1.4 ui-monospace, monospace; background: var(--papel); border: 1px solid var(--linha); border-bottom-width: 2px; border-radius: 6px; padding: 1px 6px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; background: var(--papel); border: 1px solid var(--linha); border-radius: 12px; overflow: hidden; }
+  th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--linha); vertical-align: top; }
+  th { font-size: 14px; color: var(--tinta-2); }
+  .busca { width: 100%; height: 48px; padding: 0 16px; border: 1px solid var(--linha); border-radius: 12px; background: var(--papel); color: var(--tinta); font: inherit; }
+  .lista { display: grid; gap: 10px; margin: 20px 0 0; padding: 0; list-style: none; }
+  .lista a { display: block; padding: 16px 20px; border: 1px solid var(--linha); border-radius: 14px; background: var(--papel); color: var(--tinta); text-decoration: none; }
+  .lista a:hover { border-color: var(--acao); }
+  .lista b { display: block; font-size: 18px; }
+  .lista span { color: var(--tinta-2); font-size: 15px; }
+  footer { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--linha); color: var(--tinta-2); font-size: 15px; }
+</style>
+</head>
+<body>
+<main>
+  <div class="topo"><a class="marca" href="/ajuda/">Organizza · Ajuda</a><a href="/conheca/">Conhecer o app</a></div>
+  <h1>Os tipos de espaço</h1>
+<p>Cada espaço é uma parte da sua vida com as palavras dela: a marcenaria tem clientes e projetos; a faculdade, disciplinas e trabalhos; a casa, áreas e coleções. O tipo escolhido ao criar o espaço dá os níveis, as etapas e os tipos de arquivo. <strong>Tudo isso se ajusta depois, em Configurações.</strong></p>
+<h2>Lado a lado</h2>
+<table><thead><tr><th>Tipo</th><th>Os dois níveis</th><th>As etapas</th><th>Os tipos de arquivo</th></tr></thead><tbody><tr><td><strong>Trabalho</strong> (qualquer ofício)</td><td>cliente › projeto</td><td>Contato, Proposta, Em andamento, Revisão, Entregue</td><td>Orçamentos, Contratos, Pagamentos, Entregas, Referências, Fotos, Vídeos, Áudios, Documentos, Compactados</td></tr><tr><td><strong>Marcenaria</strong></td><td>cliente › projeto</td><td>Lead, Medição, Projeto 3D, Aprovação, Contrato e sinal, Produção, Montagem, Entregue</td><td>Medidas, Projeto 3D, Orçamento, Contrato, Pagamentos, Fotos, Eletros, Vídeos, Áudios, Compactados</td></tr><tr><td><strong>Arquitetura</strong></td><td>cliente › projeto</td><td>Contato, Briefing, Estudo preliminar, Anteprojeto, Executivo, Aprovação legal, Acompanhamento, Concluído</td><td>Levantamento, Estudo preliminar, Projeto executivo, ART e RRT, Contrato, Fotos, Vídeos, Áudios, Compactados</td></tr><tr><td><strong>Fotografia</strong></td><td>cliente › ensaio</td><td>Contato, Proposta, Agendado, Ensaio, Seleção, Edição, Entregue</td><td>Briefing, Contrato, Brutos, Seleção, Finalizadas, Nota fiscal, Compactados</td></tr><tr><td><strong>Estudos</strong></td><td>disciplina › trabalho</td><td>A fazer, Estudando, Escrevendo, Revisão, Entregue, Corrigido</td><td>Enunciado, Referências, Rascunho, Entrega final, Nota e correção, Áudios, Compactados</td></tr><tr><td><strong>Pessoal</strong></td><td>área › coleção</td><td>sem etapas</td><td>Documentos, Saúde, Comprovantes, Garantias e manuais, Contratos, Fotos, Vídeos, Áudios, Orçamentos, Compactados</td></tr><tr><td><strong>Psicologia</strong></td><td>área › assunto</td><td>sem etapas</td><td>Leituras e normas, Material de estudo, Rotina da unidade, Edital e posse, Áudios, Compactados</td></tr><tr><td><strong>Concursos</strong></td><td>área › assunto</td><td>sem etapas</td><td>Edital e inscrição, Apostilas e leituras, Provas e exercícios, Áudios, Compactados</td></tr><tr><td><strong>Outro</strong></td><td>os nomes que você der</td><td>A fazer, Fazendo, Feito</td><td>Arquivos, Fotos, Vídeos, Áudios, Compactados</td></tr></tbody></table>
+<h2>Os de trabalho com clientes</h2>
+<p><strong>Trabalho, Marcenaria, Arquitetura e Fotografia</strong> têm o funil de etapas, os valores e a cobrança, a esteira do dia e a página de cada projeto.</p>
+<ul><li><strong>Marcenaria:</strong> a Medição pede as medidas e as fotos; os eletros ficam com a marca e o modelo no nome; o lugar que junta vários projetos de um cliente se chama <strong>imóvel</strong>. A página <strong>Padrões</strong> guarda as medidas de sempre.</li><li><strong>Arquitetura:</strong> o mesmo caminho, com as etapas de um escritório de projeto, e o ART e o RRT reconhecidos pelo nome.</li><li><strong>Fotografia:</strong> o projeto se chama <strong>ensaio</strong>. O arquivo bruto da câmera (NEF, CR3, ARW…) vai para Brutos e guarda o número da câmera no nome.</li></ul>
+<h2>Estudos</h2>
+<p>A disciplina é o primeiro nível, e cada trabalho, prova ou lista é o segundo. Não há valores nem cobrança. No Hoje, a esteira se chama <strong>Fila</strong>. O app reconhece o enunciado, a lista, a resolução e a foto do quadro.</p>
+<h2>Pessoal</h2>
+<p>Áreas da vida (Documentos, Saúde, Casa, Carro, Finanças, Família, Viagens, Fotos), sem clientes, funil nem valores. O Início mostra o que vence, os documentos de cada pessoa da casa têm a validade à vista, e as fotos ficam por data. Veja a página <strong>O espaço Pessoal</strong>.</p>
+<h2>Psicologia e Concursos</h2>
+<p>Os dois têm telas próprias, além das de sempre: a consulta, o estudo e o cofre na Psicologia; o plano, o edital, as questões e os simulados no Concursos. Veja as páginas <strong>O espaço de Psicologia</strong> e <strong>O espaço Concursos</strong>.</p>
+<h2>Outro</h2>
+<p>Para o que não é nenhum dos outros: uma igreja, um hobby, uma associação. Você dá o nome aos dois níveis ao criar, e liga as etapas e os valores em Configurações quando fizerem falta.</p>
+<h2>Começar com exemplos</h2>
+<p>Trabalho, Marcenaria, Arquitetura, Fotografia, Estudos e Pessoal podem nascer <strong>com exemplos</strong>: clientes, projetos e arquivos inventados, do próprio ofício, para ver como fica. <strong>Apagar os exemplos</strong> tira tudo de uma vez. Psicologia e Concursos nascem sem, porque o cofre e o pacote não se inventam.</p>
+  <p><a href="/ajuda/">← Todas as páginas da ajuda</a></p>
+  <footer>Não achou? No app, menu da conta → <b>Preciso de ajuda</b>.</footer>
+</main>
+</body>
+</html>
