@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Os padrões · Ajuda do Organizza</title>
+  <meta name="description" content="As medidas de sempre e as contas de vão do projetista." />
+  <style>
+  @font-face { font-family: 'Inter'; src: url('/conheca/inter.woff2') format('woff2'); font-weight: 100 900; font-display: swap; }
+  :root { --chao: #f6f5f2; --papel: #ffffff; --tinta: #1d1d1f; --tinta-2: #55524c; --linha: #e4e1da; --acao: #0f8f86; }
+  @media (prefers-color-scheme: dark) { :root { --chao: #121316; --papel: #1a1c20; --tinta: #f2f1ee; --tinta-2: #b3b0a8; --linha: #2c2f35; --acao: #3cc8bd; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--chao); color: var(--tinta); font: 17px/1.65 'Inter', system-ui, sans-serif; }
+  main { max-width: 780px; margin: 0 auto; padding: 48px 20px 80px; }
+  .topo { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 32px; }
+  .topo a { color: var(--tinta-2); text-decoration: none; font-size: 15px; }
+  .topo a:hover { color: var(--acao); }
+  .marca { font-weight: 700; letter-spacing: -.03em; font-size: 20px; color: var(--tinta); text-decoration: none; }
+  h1 { font-size: clamp(30px, 6vw, 40px); line-height: 1.12; letter-spacing: -.03em; margin: 0 0 16px; }
+  h2 { font-size: 22px; letter-spacing: -.015em; margin: 36px 0 8px; }
+  li + li { margin-top: 6px; }
+  a { color: var(--acao); }
+  kbd { font: 600 .85em/1.4 ui-monospace, monospace; background: var(--papel); border: 1px solid var(--linha); border-bottom-width: 2px; border-radius: 6px; padding: 1px 6px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; background: var(--papel); border: 1px solid var(--linha); border-radius: 12px; overflow: hidden; }
+  th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--linha); vertical-align: top; }
+  th { font-size: 14px; color: var(--tinta-2); }
+  .busca { width: 100%; height: 48px; padding: 0 16px; border: 1px solid var(--linha); border-radius: 12px; background: var(--papel); color: var(--tinta); font: inherit; }
+  .lista { display: grid; gap: 10px; margin: 20px 0 0; padding: 0; list-style: none; }
+  .lista a { display: block; padding: 16px 20px; border: 1px solid var(--linha); border-radius: 14px; background: var(--papel); color: var(--tinta); text-decoration: none; }
+  .lista a:hover { border-color: var(--acao); }
+  .lista b { display: block; font-size: 18px; }
+  .lista span { color: var(--tinta-2); font-size: 15px; }
+  footer { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--linha); color: var(--tinta-2); font-size: 15px; }
+</style>
+</head>
+<body>
+<main>
+  <div class="topo"><a class="marca" href="/ajuda/">Organizza · Ajuda</a><a href="/conheca/">Conhecer o app</a></div>
+  <h1>Os padrões</h1>
+<p>Os padrões guardam as medidas que você usa sempre, para consultar e aplicar no projeto. Os valores são os seus e nunca mudam sozinhos.</p>
+<h2>As medidas</h2>
+<p>Exemplos: o armário de cozinha a <strong>150 mm do chão</strong>, o armário superior a <strong>1.500 mm do chão</strong>, a pingadeira de <strong>20 mm</strong>. Edite, organize por ambiente e aceite as sugestões que fizerem sentido para você.</p>
+<h2>As contas de vão</h2>
+<ul><li><strong>Gaveteiro com cava</strong>: diga o vão e quantas gavetas; o app reparte as frentes com as divisórias, as folgas de cada frente e a da gaveta de baixo, que fica menor.</li><li><strong>Ripado</strong>: diga o vão, a largura da ripa e o vão desejado entre ripas; o app procura combinações com vãos inteiros (por exemplo, 10 ripas com vãos de 15 mm ou 12 com vãos de 14 mm) e as opções de começar e terminar com ripa ou com vão.</li></ul>
+  <p><a href="/ajuda/">← Todas as páginas da ajuda</a></p>
+  <footer>Não achou? No app, menu da conta → <b>Preciso de ajuda</b>.</footer>
+</main>
+</body>
+</html>

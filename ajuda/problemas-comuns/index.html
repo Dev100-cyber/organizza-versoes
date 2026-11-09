@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Problemas comuns · Ajuda do Organizza</title>
+  <meta name="description" content="O aviso do Windows, o arquivo aberto, o disco cheio, o computador novo." />
+  <style>
+  @font-face { font-family: 'Inter'; src: url('/conheca/inter.woff2') format('woff2'); font-weight: 100 900; font-display: swap; }
+  :root { --chao: #f6f5f2; --papel: #ffffff; --tinta: #1d1d1f; --tinta-2: #55524c; --linha: #e4e1da; --acao: #0f8f86; }
+  @media (prefers-color-scheme: dark) { :root { --chao: #121316; --papel: #1a1c20; --tinta: #f2f1ee; --tinta-2: #b3b0a8; --linha: #2c2f35; --acao: #3cc8bd; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--chao); color: var(--tinta); font: 17px/1.65 'Inter', system-ui, sans-serif; }
+  main { max-width: 780px; margin: 0 auto; padding: 48px 20px 80px; }
+  .topo { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 32px; }
+  .topo a { color: var(--tinta-2); text-decoration: none; font-size: 15px; }
+  .topo a:hover { color: var(--acao); }
+  .marca { font-weight: 700; letter-spacing: -.03em; font-size: 20px; color: var(--tinta); text-decoration: none; }
+  h1 { font-size: clamp(30px, 6vw, 40px); line-height: 1.12; letter-spacing: -.03em; margin: 0 0 16px; }
+  h2 { font-size: 22px; letter-spacing: -.015em; margin: 36px 0 8px; }
+  li + li { margin-top: 6px; }
+  a { color: var(--acao); }
+  kbd { font: 600 .85em/1.4 ui-monospace, monospace; background: var(--papel); border: 1px solid var(--linha); border-bottom-width: 2px; border-radius: 6px; padding: 1px 6px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; background: var(--papel); border: 1px solid var(--linha); border-radius: 12px; overflow: hidden; }
+  th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--linha); vertical-align: top; }
+  th { font-size: 14px; color: var(--tinta-2); }
+  .busca { width: 100%; height: 48px; padding: 0 16px; border: 1px solid var(--linha); border-radius: 12px; background: var(--papel); color: var(--tinta); font: inherit; }
+  .lista { display: grid; gap: 10px; margin: 20px 0 0; padding: 0; list-style: none; }
+  .lista a { display: block; padding: 16px 20px; border: 1px solid var(--linha); border-radius: 14px; background: var(--papel); color: var(--tinta); text-decoration: none; }
+  .lista a:hover { border-color: var(--acao); }
+  .lista b { display: block; font-size: 18px; }
+  .lista span { color: var(--tinta-2); font-size: 15px; }
+  footer { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--linha); color: var(--tinta-2); font-size: 15px; }
+</style>
+</head>
+<body>
+<main>
+  <div class="topo"><a class="marca" href="/ajuda/">Organizza · Ajuda</a><a href="/conheca/">Conhecer o app</a></div>
+  <h1>Problemas comuns</h1>
+<p>As perguntas que mais aparecem, com o que fazer. Não achou a sua? Use <strong>Preciso de ajuda</strong>, no menu da conta.</p>
+<h2>Instalar e atualizar</h2>
+<ul><li><strong>O Windows disse que &quot;protegeu o computador&quot;.</strong> Aparece com todo programa novo que ainda não tem a assinatura de código. Clique em <strong>Mais informações</strong> e depois em <strong>Executar assim mesmo</strong>. Baixe só pelo link do site.</li><li><strong>Como atualizo?</strong> Quando sai uma versão nova, o app avisa. Atualize quando quiser: nada muda na sua pasta.</li><li><strong>Desinstalar apaga os meus arquivos?</strong> Não. A pasta do Organizza fica onde está, com os arquivos e os registros. Instalar de novo e apontar para ela traz tudo de volta.</li></ul>
+<h2>Os arquivos</h2>
+<ul><li><strong>Onde estão os meus arquivos?</strong> Em Configurações → <strong>Pasta e cópias</strong> → <strong>Abrir no Explorador</strong>. São pastas normais do Windows, uma por cliente e uma por projeto.</li><li><strong>&quot;O arquivo está aberto em outro programa&quot;.</strong> O Excel, o Word ou o leitor de PDF está com ele aberto. Feche o arquivo lá e tente de novo. Nada se perdeu: o arquivo continua onde estava.</li><li><strong>&quot;O disco está cheio&quot;.</strong> Libere espaço no disco (a Lixeira do Windows e a pasta Downloads costumam ajudar) e tente de novo. O que não coube continua na Entrada.</li><li><strong>&quot;Já existe um arquivo&quot; com esse nome.</strong> O app nunca passa por cima de um arquivo. Quando ele mesmo dá o nome, usa o próximo livre (<kbd>FT_cozinha-2_…</kbd>); quando o nome é seu, peça outro.</li><li><strong>Apaguei sem querer.</strong> <kbd>Ctrl+Z</kbd> desfaz na hora. Depois, o que você retirou está em Configurações → <strong>Manutenção</strong> → <strong>Lixeira do Organizza</strong>, com <strong>Trazer para a entrada</strong>. O app nunca apaga do disco.</li><li><strong>Copiei uma pasta de cliente para dentro do Organizza pelo Explorador.</strong> O app percebe o que apareceu e oferece organizar: cada pasta vira um cliente, cada subpasta um projeto. Nada muda antes de você confirmar.</li></ul>
+<h2>A pasta, o outro computador e a nuvem</h2>
+<ul><li><strong>O app diz que a pasta &quot;não está onde estava&quot;.</strong> Ela foi movida ou mudou de nome, ou mora num HD externo que não está ligado. Ligue o HD e toque em <strong>Procurar de novo</strong>, ou em <strong>Mostrar onde ela está agora</strong>. O app não cria outra vazia no lugar sem você pedir.</li><li><strong>Posso pôr a pasta dentro do OneDrive ou do Google Drive?</strong> Não: os dois brigariam pelo mesmo arquivo e criariam cópias em conflito. Para ter o acervo em outro computador, use a conta: ela sincroniza pelo seu Google Drive, do jeito certo.</li><li><strong>O outro computador não recebeu o que fiz.</strong> Confira se os dois estão na mesma conta (o menu da conta mostra o e-mail) e com internet. Os registros chegam primeiro; os arquivos, em seguida.</li><li><strong>Comprei um computador novo.</strong> Com a conta: instale, entre com a mesma conta e escolha <strong>Trazer o seu acervo</strong>. Sem a conta: copie a pasta inteira do Organizza para um HD externo e aponte o app novo para ela.</li><li><strong>Funciona sem internet?</strong> Sim, tudo. A internet só serve para a conta e a sincronização.</li></ul>
+<h2>O cofre da Psicologia</h2>
+<ul><li><strong>Esqueci a senha do cofre.</strong> Abra com a <strong>chave de recuperação</strong>, a que apareceu uma vez ao criar o cofre. Sem a senha e sem a chave, ninguém abre, nem o Organizza: é isso que protege o sigilo.</li></ul>
+<h2>Se nada disso resolveu</h2>
+<p>Em <strong>Preciso de ajuda</strong>, escreva o que aconteceu. O diagnóstico vai junto se você deixar: a versão, contagens e os últimos erros, nunca nomes de clientes, arquivos ou conteúdo.</p>
+  <p><a href="/ajuda/">← Todas as páginas da ajuda</a></p>
+  <footer>Não achou? No app, menu da conta → <b>Preciso de ajuda</b>.</footer>
+</main>
+</body>
+</html>

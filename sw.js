@@ -14,12 +14,21 @@
  *    página em si vem sempre da rede, quando há rede, para a versão nova
  *    chegar no mesmo dia.
  *
- * O nome da cópia leva a versão: o 0.2.60 é trocado na montagem do site,
+ * O nome da cópia leva a versão: o 0.2.86 é trocado na montagem do site,
  * e a versão nova apaga as cópias da anterior.
  */
-const COPIA = 'organizza-0.2.60';
+const COPIA = 'organizza-0.2.86';
 const BANCO = 'organizza-compartilhados';
 const LOJA = 'lote';
+
+/**
+ * As páginas que não são o app: a ajuda, a landing e a privacidade. A cópia
+ * delas não pode ocupar o lugar da do app (S17), e elas não abrem sem rede.
+ */
+const foraDoApp = (url) => /^\/(ajuda|conheca|privacidade)(\/|$)/.test(url.pathname);
+
+/** Só se guarda a resposta inteira, do próprio site, sem desvio. */
+const guardavel = (resposta) => resposta.ok && resposta.type === 'basic' && !resposta.redirected;
 
 self.addEventListener('install', () => self.skipWaiting());
 
@@ -73,19 +82,19 @@ self.addEventListener('fetch', (ev) => {
       const guardado = await copia.match(ev.request);
       if (guardado) return guardado;
       const resposta = await fetch(ev.request);
-      if (resposta.ok) await copia.put(ev.request, resposta.clone());
+      if (guardavel(resposta)) await copia.put(ev.request, resposta.clone());
       return resposta;
     })());
     return;
   }
 
   // A página: da rede, guardando a última; sem rede, a última que abriu.
-  if (ev.request.mode === 'navigate') {
+  if (ev.request.mode === 'navigate' && !foraDoApp(url)) {
     ev.respondWith((async () => {
       const copia = await caches.open(COPIA);
       try {
         const resposta = await fetch(ev.request);
-        if (resposta.ok) await copia.put('/', resposta.clone());
+        if (guardavel(resposta)) await copia.put('/', resposta.clone());
         return resposta;
       } catch {
         return (await copia.match('/')) ?? Response.error();

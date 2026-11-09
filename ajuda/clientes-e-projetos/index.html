@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Clientes e projetos · Ajuda do Organizza</title>
+  <meta name="description" content="O cliente, os projetos, os imóveis, os arquivos gerais e as etapas." />
+  <style>
+  @font-face { font-family: 'Inter'; src: url('/conheca/inter.woff2') format('woff2'); font-weight: 100 900; font-display: swap; }
+  :root { --chao: #f6f5f2; --papel: #ffffff; --tinta: #1d1d1f; --tinta-2: #55524c; --linha: #e4e1da; --acao: #0f8f86; }
+  @media (prefers-color-scheme: dark) { :root { --chao: #121316; --papel: #1a1c20; --tinta: #f2f1ee; --tinta-2: #b3b0a8; --linha: #2c2f35; --acao: #3cc8bd; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--chao); color: var(--tinta); font: 17px/1.65 'Inter', system-ui, sans-serif; }
+  main { max-width: 780px; margin: 0 auto; padding: 48px 20px 80px; }
+  .topo { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 32px; }
+  .topo a { color: var(--tinta-2); text-decoration: none; font-size: 15px; }
+  .topo a:hover { color: var(--acao); }
+  .marca { font-weight: 700; letter-spacing: -.03em; font-size: 20px; color: var(--tinta); text-decoration: none; }
+  h1 { font-size: clamp(30px, 6vw, 40px); line-height: 1.12; letter-spacing: -.03em; margin: 0 0 16px; }
+  h2 { font-size: 22px; letter-spacing: -.015em; margin: 36px 0 8px; }
+  li + li { margin-top: 6px; }
+  a { color: var(--acao); }
+  kbd { font: 600 .85em/1.4 ui-monospace, monospace; background: var(--papel); border: 1px solid var(--linha); border-bottom-width: 2px; border-radius: 6px; padding: 1px 6px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; background: var(--papel); border: 1px solid var(--linha); border-radius: 12px; overflow: hidden; }
+  th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--linha); vertical-align: top; }
+  th { font-size: 14px; color: var(--tinta-2); }
+  .busca { width: 100%; height: 48px; padding: 0 16px; border: 1px solid var(--linha); border-radius: 12px; background: var(--papel); color: var(--tinta); font: inherit; }
+  .lista { display: grid; gap: 10px; margin: 20px 0 0; padding: 0; list-style: none; }
+  .lista a { display: block; padding: 16px 20px; border: 1px solid var(--linha); border-radius: 14px; background: var(--papel); color: var(--tinta); text-decoration: none; }
+  .lista a:hover { border-color: var(--acao); }
+  .lista b { display: block; font-size: 18px; }
+  .lista span { color: var(--tinta-2); font-size: 15px; }
+  footer { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--linha); color: var(--tinta-2); font-size: 15px; }
+</style>
+</head>
+<body>
+<main>
+  <div class="topo"><a class="marca" href="/ajuda/">Organizza · Ajuda</a><a href="/conheca/">Conhecer o app</a></div>
+  <h1>Clientes e projetos</h1>
+<p>Cada cliente tem um código e uma pasta. Dentro dela, cada projeto tem a sua, com uma pasta por tipo de arquivo. Você nunca escolhe caminho nenhum: o app cria e mantém.</p>
+<h2>O cliente</h2>
+<ul><li>Criar um cliente cria a pasta dele e o primeiro projeto.</li><li>A página do cliente junta os projetos, os arquivos, as tarefas, as notas e o contato. O telefone e o e-mail se copiam com um clique, e o WhatsApp abre direto.</li><li><strong>Os arquivos gerais</strong> são o que é do cliente e não de um projeto só: o contrato, as medidas da casa. No disco, ficam na pasta <kbd>00_geral</kbd> do cliente. Quando o projeto certo existir, cada arquivo passa para ele pelo <strong>Mover…</strong> ou arrastando até o cartão.</li></ul>
+<h2>Trabalhar neste: a página do projeto</h2>
+<p>Na visão geral do cliente, cada projeto em andamento é uma linha, com a etapa, a entrega, o que falta para avançar e o botão <strong>Trabalhar neste</strong>.</p>
+<ul><li><strong>Trabalhar neste</strong> põe o projeto em mãos e abre a página dele. Se outro já estava em mãos, o app pergunta antes onde você parou nele. Um <kbd>Ctrl+Z</kbd> desfaz.</li><li><strong>Clicar no nome</strong> abre a página sem pôr em mãos.</li><li><strong>A página do projeto</strong> junta tudo para trabalhar nele:<ul><li>no alto, <strong>Concluir…</strong>, <strong>Pegar outro</strong> e <strong>Parar</strong>, quando ele está em mãos;</li><li>a etapa com <strong>Avançar para…</strong>, o próximo compromisso, a entrega e o valor;</li><li><strong>Onde você parou</strong> e <strong>Para avançar</strong>;</li><li>os arquivos do projeto e os <strong>Arquivos gerais</strong> do cliente, cada um com <strong>Trazer</strong>;</li><li>ao lado, o contato do cliente, os ambientes, os acabamentos, as tarefas, as notas e o histórico.</li></ul></li><li><strong>Soltar um arquivo em qualquer lugar da página</strong> manda para este projeto, pela Entrada.</li></ul>
+<p>O que o espaço não usa não aparece: sem etapas (como no Pessoal), sem a etapa; sem dinheiro, sem o valor.</p>
+<h2>Projetos e imóveis</h2>
+<p>Um cliente pode ter vários projetos, como a cozinha e o closet, cada um com os arquivos dele.</p>
+<ul><li>Quando o cliente tem mais de um lugar, como um apartamento e uma casa de praia, junte os projetos de cada um num <strong>imóvel</strong>: no <strong>⋮</strong> do projeto, <strong>Pôr num imóvel…</strong>. A pasta do projeto vai para dentro da pasta do imóvel.</li><li>Um projeto que juntava vários ambientes se divide em <strong>⋮ → Separar por ambiente…</strong>: cada ambiente vira um projeto, dentro de um imóvel, e um <kbd>Ctrl+Z</kbd> desfaz tudo.</li></ul>
+<h2>As etapas</h2>
+<p>Cada projeto anda por etapas, que você ajusta em Configurações. Veja os projetos no <strong>quadro</strong>, na <strong>lista</strong>, na <strong>tabela</strong> ou no <strong>calendário</strong>.</p>
+<table><thead><tr><th>Tecla</th><th>O que faz</th></tr></thead><tbody><tr><td>setas</td><td>Andar entre os cards do quadro</td></tr><tr><td><kbd>Ctrl+←</kbd> e <kbd>Ctrl+→</kbd></td><td>Levar o card para a etapa ao lado</td></tr><tr><td><kbd>F2</kbd></td><td>Renomear o que está em foco</td></tr></tbody></table>
+<p>O botão direito do mouse abre o menu de cada item, em qualquer lista.</p>
+<h2>Arquivar</h2>
+<p>O projeto terminado vai para os arquivados: some das listas do dia a dia, e nada se perde.</p>
+  <p><a href="/ajuda/">← Todas as páginas da ajuda</a></p>
+  <footer>Não achou? No app, menu da conta → <b>Preciso de ajuda</b>.</footer>
+</main>
+</body>
+</html>

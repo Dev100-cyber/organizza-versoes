@@ -6,8 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Organizza</title>
     <meta name="description" content="Cada arquivo no lugar certo. Cada cliente em dia. Do WhatsApp à pasta certa, sem você organizar nada." />
-    <script type="module" crossorigin src="/assets/index-DzwTE40O.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-D6G7WpZe.css">
+    <!--
+      A tela de abrir (26/10): aparece antes de o app chegar, para o celular não
+      ficar em branco enquanto ele baixa. O React a troca pela tela de verdade.
+      As cores são as do chão e da tinta-3 de tokens.css, escritas aqui porque o
+      CSS do app ainda não chegou; sem script, que a CSP do app não deixa.
+    -->
+    <style>
+      .abrindo { position: fixed; inset: 0; display: grid; place-items: center; background: #F5F5F4; color: #6E6A64; font: 500 14px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif; }
+      @media (prefers-color-scheme: dark) { .abrindo { background: #0D1014; color: #8D98A7; } }
+    </style>
+    <script type="module" crossorigin src="/assets/index-CCuxl2oI.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-vG05yjfI.css">
       <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="manifest" href="/manifest.webmanifest" />
     <meta name="theme-color" content="#16181d" />
@@ -15,6 +25,6 @@
     <meta name="apple-mobile-web-app-title" content="Organizza" />
   </head>
   <body>
-    <div id="raiz"></div>
+    <div id="raiz"><div class="abrindo" role="status">Abrindo…</div></div>
   </body>
 </html>

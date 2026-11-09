@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>A Entrada · Ajuda do Organizza</title>
+  <meta name="description" content="Os arquivos que chegam, e como eles vão para o lugar certo." />
+  <style>
+  @font-face { font-family: 'Inter'; src: url('/conheca/inter.woff2') format('woff2'); font-weight: 100 900; font-display: swap; }
+  :root { --chao: #f6f5f2; --papel: #ffffff; --tinta: #1d1d1f; --tinta-2: #55524c; --linha: #e4e1da; --acao: #0f8f86; }
+  @media (prefers-color-scheme: dark) { :root { --chao: #121316; --papel: #1a1c20; --tinta: #f2f1ee; --tinta-2: #b3b0a8; --linha: #2c2f35; --acao: #3cc8bd; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--chao); color: var(--tinta); font: 17px/1.65 'Inter', system-ui, sans-serif; }
+  main { max-width: 780px; margin: 0 auto; padding: 48px 20px 80px; }
+  .topo { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 32px; }
+  .topo a { color: var(--tinta-2); text-decoration: none; font-size: 15px; }
+  .topo a:hover { color: var(--acao); }
+  .marca { font-weight: 700; letter-spacing: -.03em; font-size: 20px; color: var(--tinta); text-decoration: none; }
+  h1 { font-size: clamp(30px, 6vw, 40px); line-height: 1.12; letter-spacing: -.03em; margin: 0 0 16px; }
+  h2 { font-size: 22px; letter-spacing: -.015em; margin: 36px 0 8px; }
+  li + li { margin-top: 6px; }
+  a { color: var(--acao); }
+  kbd { font: 600 .85em/1.4 ui-monospace, monospace; background: var(--papel); border: 1px solid var(--linha); border-bottom-width: 2px; border-radius: 6px; padding: 1px 6px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; background: var(--papel); border: 1px solid var(--linha); border-radius: 12px; overflow: hidden; }
+  th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--linha); vertical-align: top; }
+  th { font-size: 14px; color: var(--tinta-2); }
+  .busca { width: 100%; height: 48px; padding: 0 16px; border: 1px solid var(--linha); border-radius: 12px; background: var(--papel); color: var(--tinta); font: inherit; }
+  .lista { display: grid; gap: 10px; margin: 20px 0 0; padding: 0; list-style: none; }
+  .lista a { display: block; padding: 16px 20px; border: 1px solid var(--linha); border-radius: 14px; background: var(--papel); color: var(--tinta); text-decoration: none; }
+  .lista a:hover { border-color: var(--acao); }
+  .lista b { display: block; font-size: 18px; }
+  .lista span { color: var(--tinta-2); font-size: 15px; }
+  footer { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--linha); color: var(--tinta-2); font-size: 15px; }
+</style>
+</head>
+<body>
+<main>
+  <div class="topo"><a class="marca" href="/ajuda/">Organizza · Ajuda</a><a href="/conheca/">Conhecer o app</a></div>
+  <h1>A Entrada</h1>
+<p>A Entrada é onde o arquivo espera até você dizer o que ele é. <strong>Nada vai para o projeto sem você confirmar.</strong></p>
+<h2>Como os arquivos chegam</h2>
+<ul><li>Arrastando para a janela do app, ou colando com <kbd>Ctrl+V</kbd>.</li><li>Pelo botão <strong>Enviar arquivos</strong>, no topo.</li><li>Pela pasta de entrada do espaço, dentro da pasta do Organizza.</li><li>Pelos downloads do WhatsApp Desktop, quando você liga isso: o app traz o que chegar depois de ligado, copiando sem tirar o original.</li><li>Soltando o arquivo direto no cartão de um cliente ou de um projeto, em qualquer lista.</li><li>Pelo Explorador do Windows: botão direito num arquivo ou numa pasta, <strong>Enviar para → Organizza</strong>. O app vem para a frente (ou abre, se estava fechado) e o que você mandou cai na Entrada do espaço aberto. O original fica onde estava.</li></ul>
+<h2>A Entrada chega preenchida</h2>
+<p>Cada arquivo chega com o <strong>cliente, a pasta e o tipo</strong> que o app acha, e você só confere.</p>
+<ul><li><strong>Tracejado é o palpite do app; liso é a sua decisão.</strong> O selo diz a certeza (&quot;Certo&quot;, &quot;Provável&quot;), e a frase embaixo do grupo diz o porquê.</li><li><strong>Os grupos:</strong> o que chegou junto vira um grupo, com uma confirmação só. As fotos e os vídeos da mesma conversa se juntam pela hora no nome; o PDF fica sozinho.</li><li><strong>O que falta vira uma pergunta por grupo:</strong> &quot;De quem são os 3?&quot;, com os clientes mais prováveis e o porquê de cada um; &quot;Em qual pasta?&quot;, quando o cliente tem vários projetos; &quot;Que tipo?&quot;. A conversa seguinte aprende a resposta.</li><li><strong>Guardar os N prontos</strong> guarda de uma vez tudo o que já tem destino e tipo. <strong>Conferir um por um</strong> abre o visor grande, com a decisão ao lado; <kbd>Enter</kbd> diz que está certo e passa ao próximo.</li></ul>
+<p><strong>De onde vêm os palpites:</strong></p>
+<ul><li><strong>O nome do arquivo:</strong> o código do cliente decide; o nome do cliente sugere. Nome de pessoa nunca decide sozinho.</li><li><strong>O projeto em mãos</strong> reforça o palpite do mesmo cliente, e nunca contradiz os outros.</li><li><strong>O que você costuma fazer:</strong> se as imagens de um cliente quase sempre viram Medidas, a próxima já vem assim.</li><li><strong>A etapa do projeto:</strong> a Medição pede as medidas e as fotos, e esses tipos vêm primeiro.</li><li><strong>A agenda:</strong> a foto tirada durante um compromisso é, provavelmente, do projeto dele.</li><li><strong>O texto do PDF:</strong> o código, o e-mail ou o telefone do cliente.</li><li><strong>No Concursos, o tipo diz a área:</strong> o edital vai para Concursos, a prova antiga para Provas anteriores, a apostila para Matérias.</li></ul>
+<h2>Os avisos</h2>
+<ul><li><strong>Já guardado</strong>: o mesmo conteúdo já está no acervo. Não precisa guardar de novo: <strong>Tirar da Entrada</strong>.</li><li><strong>Repetido na Entrada</strong>: dois arquivos iguais esperando juntos (o <kbd>foto.jpg</kbd> e o <kbd>foto (1).jpg</kbd>). Fica o que tem menos cara de cópia, e você escolhe: <strong>Ficar com esta</strong> (sai o outro) ou <strong>Tirar da Entrada</strong> (sai a cópia). Os dois têm <kbd>Ctrl+Z</kbd>.</li><li><strong>parece já guardada</strong>: uma foto quase igual, reenviada pelo WhatsApp. Compare antes de decidir.</li><li><strong>roda programa</strong>: um instalador ou um atalho. O app guarda se você quiser, mas nunca abre: só pelo Explorador, se você confia em quem mandou.</li><li><strong>não parece trabalho</strong>: o instalador, a figurinha, o download pela metade. Ficam à parte, sem pedir de quem são.</li></ul>
+<h2>Teclas da Entrada</h2>
+<table><thead><tr><th>Tecla</th><th>O que faz</th></tr></thead><tbody><tr><td><kbd>1</kbd> a <kbd>9</kbd></td><td>Dizer o tipo dos escolhidos, pela ordem da lista</td></tr><tr><td><kbd>Alt+1</kbd> a <kbd>Alt+9</kbd></td><td>Mandar para a pasta daquele número, no cliente escolhido</td></tr><tr><td><kbd>Alt+0</kbd></td><td>Mandar para os Arquivos gerais do cliente</td></tr><tr><td><kbd>Enter</kbd></td><td>Guardar o que está pronto</td></tr><tr><td><kbd>Delete</kbd></td><td>Tirar da Entrada</td></tr><tr><td><kbd>Ctrl+A</kbd></td><td>Escolher todos</td></tr><tr><td><kbd>Espaço</kbd></td><td>Escolher ou soltar o arquivo em foco</td></tr><tr><td><kbd>Shift+clique</kbd></td><td>Escolher um intervalo</td></tr></tbody></table>
+<p>Errou? <kbd>Ctrl+Z</kbd> desfaz.</p>
+  <p><a href="/ajuda/">← Todas as páginas da ajuda</a></p>
+  <footer>Não achou? No app, menu da conta → <b>Preciso de ajuda</b>.</footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Notas e diagramas · Ajuda do Organizza</title>
+  <meta name="description" content="Os cadernos, as etiquetas e as citações." />
+  <style>
+  @font-face { font-family: 'Inter'; src: url('/conheca/inter.woff2') format('woff2'); font-weight: 100 900; font-display: swap; }
+  :root { --chao: #f6f5f2; --papel: #ffffff; --tinta: #1d1d1f; --tinta-2: #55524c; --linha: #e4e1da; --acao: #0f8f86; }
+  @media (prefers-color-scheme: dark) { :root { --chao: #121316; --papel: #1a1c20; --tinta: #f2f1ee; --tinta-2: #b3b0a8; --linha: #2c2f35; --acao: #3cc8bd; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--chao); color: var(--tinta); font: 17px/1.65 'Inter', system-ui, sans-serif; }
+  main { max-width: 780px; margin: 0 auto; padding: 48px 20px 80px; }
+  .topo { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 32px; }
+  .topo a { color: var(--tinta-2); text-decoration: none; font-size: 15px; }
+  .topo a:hover { color: var(--acao); }
+  .marca { font-weight: 700; letter-spacing: -.03em; font-size: 20px; color: var(--tinta); text-decoration: none; }
+  h1 { font-size: clamp(30px, 6vw, 40px); line-height: 1.12; letter-spacing: -.03em; margin: 0 0 16px; }
+  h2 { font-size: 22px; letter-spacing: -.015em; margin: 36px 0 8px; }
+  li + li { margin-top: 6px; }
+  a { color: var(--acao); }
+  kbd { font: 600 .85em/1.4 ui-monospace, monospace; background: var(--papel); border: 1px solid var(--linha); border-bottom-width: 2px; border-radius: 6px; padding: 1px 6px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; background: var(--papel); border: 1px solid var(--linha); border-radius: 12px; overflow: hidden; }
+  th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--linha); vertical-align: top; }
+  th { font-size: 14px; color: var(--tinta-2); }
+  .busca { width: 100%; height: 48px; padding: 0 16px; border: 1px solid var(--linha); border-radius: 12px; background: var(--papel); color: var(--tinta); font: inherit; }
+  .lista { display: grid; gap: 10px; margin: 20px 0 0; padding: 0; list-style: none; }
+  .lista a { display: block; padding: 16px 20px; border: 1px solid var(--linha); border-radius: 14px; background: var(--papel); color: var(--tinta); text-decoration: none; }
+  .lista a:hover { border-color: var(--acao); }
+  .lista b { display: block; font-size: 18px; }
+  .lista span { color: var(--tinta-2); font-size: 15px; }
+  footer { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--linha); color: var(--tinta-2); font-size: 15px; }
+</style>
+</head>
+<body>
+<main>
+  <div class="topo"><a class="marca" href="/ajuda/">Organizza · Ajuda</a><a href="/conheca/">Conhecer o app</a></div>
+  <h1>Notas e diagramas</h1>
+<h2>Notas</h2>
+<p>Escreva como num caderno. As notas se organizam em cadernos, e o que você escreve nelas liga o resto:</p>
+<table><thead><tr><th>Tecla</th><th>O que faz</th></tr></thead><tbody><tr><td><kbd>@</kbd></td><td>Citar um cliente, projeto, tarefa, nota ou arquivo</td></tr><tr><td><kbd>#</kbd></td><td>Pôr uma etiqueta</td></tr><tr><td><kbd>/</kbd></td><td>Inserir título, lista, caixa de marcar, a data de hoje</td></tr><tr><td><kbd>Ctrl+F</kbd></td><td>Procurar dentro da nota</td></tr></tbody></table>
+<p>Os cadernos, as etiquetas e as citações saem do próprio texto: não há o que manter em dia à parte. Imagens coladas entram na nota.</p>
+<h2>Diagramas</h2>
+<p>Caixas e ligações para pensar um projeto.</p>
+<table><thead><tr><th>Tecla</th><th>O que faz</th></tr></thead><tbody><tr><td><kbd>Ctrl+D</kbd></td><td>Duplicar a caixa escolhida</td></tr><tr><td><kbd>Delete</kbd></td><td>Tirar a caixa ou a ligação</td></tr><tr><td><kbd>Ctrl+Z</kbd> e <kbd>Ctrl+Shift+Z</kbd></td><td>Desfazer e refazer</td></tr></tbody></table>
+  <p><a href="/ajuda/">← Todas as páginas da ajuda</a></p>
+  <footer>Não achou? No app, menu da conta → <b>Preciso de ajuda</b>.</footer>
+</main>
+</body>
+</html>
