@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>O estado do serviço e os problemas conhecidos · Ajuda do Organizza</title>
+  <meta name="description" content="O que depende de serviço de fora, onde conferir se caiu, e os problemas já conhecidos." />
+  <style>
+  @font-face { font-family: 'Inter'; src: url('/conheca/inter.woff2') format('woff2'); font-weight: 100 900; font-display: swap; }
+  :root { --chao: #f6f5f2; --papel: #ffffff; --tinta: #1d1d1f; --tinta-2: #55524c; --linha: #e4e1da; --acao: #0f8f86; }
+  @media (prefers-color-scheme: dark) { :root { --chao: #121316; --papel: #1a1c20; --tinta: #f2f1ee; --tinta-2: #b3b0a8; --linha: #2c2f35; --acao: #3cc8bd; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--chao); color: var(--tinta); font: 17px/1.65 'Inter', system-ui, sans-serif; }
+  main { max-width: 780px; margin: 0 auto; padding: 48px 20px 80px; }
+  .topo { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 32px; }
+  .topo a { color: var(--tinta-2); text-decoration: none; font-size: 15px; }
+  .topo a:hover { color: var(--acao); }
+  .marca { font-weight: 700; letter-spacing: -.03em; font-size: 20px; color: var(--tinta); text-decoration: none; }
+  h1 { font-size: clamp(30px, 6vw, 40px); line-height: 1.12; letter-spacing: -.03em; margin: 0 0 16px; }
+  h2 { font-size: 22px; letter-spacing: -.015em; margin: 36px 0 8px; }
+  li + li { margin-top: 6px; }
+  a { color: var(--acao); }
+  kbd { font: 600 .85em/1.4 ui-monospace, monospace; background: var(--papel); border: 1px solid var(--linha); border-bottom-width: 2px; border-radius: 6px; padding: 1px 6px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; background: var(--papel); border: 1px solid var(--linha); border-radius: 12px; overflow: hidden; }
+  th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--linha); vertical-align: top; }
+  th { font-size: 14px; color: var(--tinta-2); }
+  .busca { width: 100%; height: 48px; padding: 0 16px; border: 1px solid var(--linha); border-radius: 12px; background: var(--papel); color: var(--tinta); font: inherit; }
+  .lista { display: grid; gap: 10px; margin: 20px 0 0; padding: 0; list-style: none; }
+  .lista a { display: block; padding: 16px 20px; border: 1px solid var(--linha); border-radius: 14px; background: var(--papel); color: var(--tinta); text-decoration: none; }
+  .lista a:hover { border-color: var(--acao); }
+  .lista b { display: block; font-size: 18px; }
+  .lista span { color: var(--tinta-2); font-size: 15px; }
+  footer { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--linha); color: var(--tinta-2); font-size: 15px; }
+</style>
+</head>
+<body>
+<main>
+  <div class="topo"><a class="marca" href="/ajuda/">Organizza · Ajuda</a><a href="/conheca/">Conhecer o app</a></div>
+  <h1>O estado do serviço e os problemas conhecidos</h1>
+<p>O Organizza funciona inteiro no seu computador, sem internet. Só algumas partes dependem de um serviço de fora. Se um deles cair, para só aquela parte, e nada do que está na sua pasta se perde.</p>
+<h2>O que depende de quem</h2>
+<table><thead><tr><th>Parte</th><th>Depende de</th><th>Onde conferir se caiu</th></tr></thead><tbody><tr><td>Entrar na conta</td><td>o login do Google e do Firebase</td><td><kbd>status.firebase.google.com</kbd></td></tr><tr><td>Sincronizar com o outro computador, a pasta ligada e o pacote do Concursos no celular</td><td>o seu Google Drive</td><td><kbd>www.google.com/appsstatus/dashboard</kbd></td></tr><tr><td>O site e o app no celular</td><td>o GitHub Pages, em <kbd>app.endgame.fun</kbd></td><td><kbd>www.githubstatus.com</kbd></td></tr><tr><td>Avisar e baixar a versão nova</td><td>o GitHub</td><td><kbd>www.githubstatus.com</kbd></td></tr></tbody></table>
+<p><strong>Sem internet:</strong> a Entrada, os projetos, as notas, as contas, o Concursos e o cofre da Psicologia funcionam do mesmo jeito. O que esperava sincronizar vai quando a internet voltar.</p>
+<h2>Os problemas conhecidos</h2>
+<ul><li><strong>Arrastar do WhatsApp Desktop para a janela principal não traz o arquivo.</strong> O WhatsApp entrega a foto sem o arquivo pelo arraste. Use o <strong>painel ao lado do WhatsApp</strong>, que recebe o arraste dele; ou, no WhatsApp, <strong>Salvar tudo</strong> na pasta de entrada, ou <strong>Baixar</strong>, que o app pega sozinho da pasta Downloads.</li><li><strong>O Windows avisa que &quot;protegeu o computador&quot; ao instalar.</strong> O instalador ainda não tem a assinatura de código. Clique em <strong>Mais informações</strong> e em <strong>Executar assim mesmo</strong>, e baixe só pelo link do site.</li><li><strong>No site e no celular não dá para abrir a pasta do computador.</strong> O site guarda no navegador e lê o que vem pelo seu Google Drive. A pasta inteira fica no app do computador.</li><li><strong>O atalho de qualquer programa vem desligado.</strong> Ligue em Configurações. Se a combinação já for usada por outro programa (o <kbd>Ctrl+Shift+O</kbd> abre os favoritos do Chrome e do Edge), escolha a outra.</li></ul>
+<h2>Se o seu problema não está aqui</h2>
+<p>Veja <strong>Problemas comuns</strong>, ou use <strong>Preciso de ajuda</strong>, no menu da conta: o texto que você escrever vai junto do diagnóstico do app, sem nada pessoal, se você deixar.</p>
+  <p><a href="/ajuda/">← Todas as páginas da ajuda</a></p>
+  <footer>Não achou? No app, menu da conta → <b>Preciso de ajuda</b>.</footer>
+</main>
+</body>
+</html>
